@@ -261,3 +261,164 @@ void menuListarMecanicos(SistemaTaller* s) {
 
     delete[] lista;
 }
+
+// ====================================================================
+// --- CAPA DE LÓGICA: REPUESTOS (INVENTARIO) ---
+// ====================================================================
+
+// Buscar repuesto por código exacto (para evitar duplicados al registrar)
+Repuesto* buscarRepuestoPorCodigo(SistemaTaller s, const char* codigo) {
+    for (int i = 0; i < s.numRepuestos; i++) {
+        if (strcmp(s.repuestos[i].codigo, codigo) == 0) {
+            return &s.repuestos[i];
+        }
+    }
+    return nullptr; // No encontrado
+}
+
+// Buscar repuesto por ID
+Repuesto* buscarRepuestoPorID(SistemaTaller s, int id) {
+    for (int i = 0; i < s.numRepuestos; i++) {
+        if (s.repuestos[i].id == id) {
+            return &s.repuestos[i];
+        }
+    }
+    return nullptr;
+}
+
+// Agregar un nuevo repuesto al inventario
+Repuesto* agregarRepuesto(SistemaTaller* s, Repuesto datos) {
+    // Validación 1: Precio y stock deben ser válidos
+    if (datos.precio <= 0 || datos.stock < 0 || datos.stockMinimo < 0) {
+        return nullptr;
+    }
+
+    // Validación 2: El código del repuesto no puede estar repetido
+    if (buscarRepuestoPorCodigo(*s, datos.codigo) != nullptr) {
+        return nullptr;
+    }
+
+    // Redimensionamiento dinámico automático (patrón obligatorio)
+    if (s->numRepuestos >= s->capacidadRepuestos) {
+        s->capacidadRepuestos *= 2;
+        Repuesto* nuevoArreglo = new Repuesto[s->capacidadRepuestos];
+
+        for (int i = 0; i < s->numRepuestos; i++) {
+            nuevoArreglo[i] = s->repuestos[i];
+        }
+
+        delete[] s->repuestos; // Evitar fugas de memoria
+        s->repuestos = nuevoArreglo;
+    }
+
+    // Asignación de ID y registro
+    datos.id = s->siguienteIdRepuesto++;
+    s->repuestos[s->numRepuestos] = datos;
+    s->numRepuestos++;
+
+    return &s->repuestos[s->numRepuestos - 1];
+}
+
+// Registrar entrada de mercancía (sumar al stock existente)
+bool registrarEntradaRepuesto(SistemaTaller* s, int idRepuesto, int cantidadAgregar) {
+    if (cantidadAgregar <= 0) return false;
+
+    Repuesto* rep = buscarRepuestoPorID(*s, idRepuesto);
+    if (rep != nullptr) {
+        rep->stock += cantidadAgregar;
+        return true;
+    }
+    return false;
+}
+
+// Listar todos los repuestos (retorna arreglo de punteros)
+Repuesto** listarRepuestos(SistemaTaller s, int* cantidad) {
+    *cantidad = s.numRepuestos;
+    if (*cantidad == 0) return nullptr;
+
+    Repuesto** lista = new Repuesto*[*cantidad];
+    for (int i = 0; i < *cantidad; i++) {
+        lista[i] = &s.repuestos[i];
+    }
+    return lista;
+}
+
+// ====================================================================
+// --- CAPA DE PRESENTACIÓN: REPUESTOS ---
+// ====================================================================
+
+void menuRegistrarRepuesto(SistemaTaller* s) {
+    Repuesto r;
+    cout << "\n--- REGISTRAR NUEVO REPUESTO ---\n";
+    
+    cout << "Codigo (ej. FILT-001): ";
+    cin.ignore();
+    cin.getline(r.codigo, 20);
+    
+    cout << "Nombre del repuesto: ";
+    cin.getline(r.nombre, 100);
+    
+    cout << "Marca: ";
+    cin.getline(r.marca, 50);
+    
+    cout << "Precio unitario ($): ";
+    cin >> r.precio;
+    
+    cout << "Stock inicial: ";
+    cin >> r.stock;
+    
+    cout << "Stock minimo (alerta): ";
+    cin >> r.stockMinimo;
+    
+    cin.ignore();
+    cout << "Fecha de registro (YYYY-MM-DD): ";
+    cin.getline(r.fechaRegistro, 11);
+
+    Repuesto* res = agregarRepuesto(s, r);
+    if (res != nullptr) {
+        cout << "¡Repuesto registrado exitosamente con ID #" << res->id << "!\n";
+    } else {
+        cout << "ERROR: No se pudo registrar. Verifique valores (precio/stock) o si el codigo ya existe.\n";
+    }
+}
+
+void menuListarRepuestos(SistemaTaller* s) {
+    int cantidad = 0;
+    Repuesto** lista = listarRepuestos(*s, &cantidad);
+    
+    if (cantidad == 0 || lista == nullptr) {
+        cout << "\nNo hay repuestos registrados en el inventario.\n";
+        return;
+    }
+
+    cout << "\n--- INVENTARIO DE REPUESTOS ---\n";
+    for (int i = 0; i < cantidad; i++) {
+        cout << "ID: " << lista[i]->id 
+             << " | Codigo: " << lista[i]->codigo 
+             << " | Nombre: " << lista[i]->nombre 
+             << " | Stock: " << lista[i]->stock;
+             
+        // Validación de alerta visual de bajo stock
+        if (lista[i]->stock <= lista[i]->stockMinimo) {
+            cout << " [ALERTA: BAJO STOCK]";
+        }
+        cout << "\n";
+    }
+    
+    delete[] lista; // Fundamental liberar la memoria del arreglo temporal
+}
+
+void menuEntradaMercancia(SistemaTaller* s) {
+    int idRepuesto, cantidad;
+    cout << "\n--- ENTRADA DE MERCANCIA ---\n";
+    cout << "Ingrese el ID del repuesto: ";
+    cin >> idRepuesto;
+    cout << "Ingrese la cantidad a sumar al stock: ";
+    cin >> cantidad;
+
+    if (registrarEntradaRepuesto(s, idRepuesto, cantidad)) {
+        cout << "¡Stock actualizado exitosamente!\n";
+    } else {
+        cout << "ERROR: No se pudo actualizar el stock (ID no encontrado o cantidad invalida).\n";
+    }
+}
