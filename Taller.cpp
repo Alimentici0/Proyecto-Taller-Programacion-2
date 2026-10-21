@@ -344,6 +344,120 @@ Repuesto** listarRepuestos(SistemaTaller s, int* cantidad) {
 }
 
 // ====================================================================
+// --- CAPA DE LÓGICA: ÓRDENES DE SERVICIO ---
+// ====================================================================
+
+// 1. Abrir nueva Orden de Servicio
+OrdenServicio* abrirOrdenServicio(SistemaTaller* s, int idVehiculo, int idMecanico, const char* fechaApertura, const char* descripcionFalla) {
+    // Validar que el mecánico no tenga 3 o más órdenes abiertas (Regla de negocio)
+    if (contarOrdenesAbiertasMecanico(*s, idMecanico) >= 3) {
+        return nullptr; // Límite excedido
+    }
+
+    // Redimensionamiento dinámico del arreglo principal de órdenes
+    if (s->numOrdenes >= s->capacidadOrdenes) {
+        s->capacidadOrdenes *= 2;
+        OrdenServicio* nuevoArreglo = new OrdenServicio[s->capacidadOrdenes];
+        for (int i = 0; i < s->numOrdenes; i++) {
+            nuevoArreglo[i] = s->ordenes[i];
+        }
+        delete[] s->ordenes;
+        s->ordenes = nuevoArreglo;
+    }
+
+    // Crear la nueva orden
+    OrdenServicio nuevaOrden;
+    nuevaOrden.id = s->siguienteIdOrden++;
+    nuevaOrden.idVehiculo = idVehiculo;
+    nuevaOrden.idMecanico = idMecanico;
+    strcpy(nuevaOrden.fechaApertura, fechaApertura);
+    strcpy(nuevaOrden.fechaCierre, ""); // Aún no cerrada
+    strcpy(nuevaOrden.estado, "ABIERTA");
+    strcpy(nuevaOrden.descripcionFalla, descripcionFalla);
+    nuevaOrden.kilometrajeIngreso = 0;
+    nuevaOrden.manoObra = 0.0f;
+
+    // MEMORIA DINÁMICA ANIDADA: Inicializar el arreglo interno de repuestos
+    nuevaOrden.capacidadDetalles = 2; // Capacidad inicial
+    nuevaOrden.numDetalles = 0;
+    nuevaOrden.detalles = new DetalleOrden[nuevaOrden.capacidadDetalles];
+
+    // Guardar en el sistema
+    s->ordenes[s->numOrdenes] = nuevaOrden;
+    s->numOrdenes++;
+
+    return &s->ordenes[s->numOrdenes - 1];
+}
+
+// 2. Buscar Orden por ID
+OrdenServicio* buscarOrdenPorID(SistemaTaller s, int idOrden) {
+    for (int i = 0; i < s.numOrdenes; i++) {
+        if (s.ordenes[i].id == idOrden) {
+            return &s.ordenes[i];
+        }
+    }
+    return nullptr;
+}
+
+// 3. Agregar Repuesto a una Orden Abierta (DetalleOrden)
+bool agregarRepuestoAOrden(SistemaTaller* s, int idOrden, int idRepuesto, int cantidad) {
+    OrdenServicio* orden = buscarOrdenPorID(*s, idOrden);
+    if (orden == nullptr || strcmp(orden->estado, "ABIERTA") != 0) return false;
+
+    Repuesto* rep = buscarRepuestoPorID(*s, idRepuesto);
+    if (rep == nullptr || rep->stock < cantidad || cantidad <= 0) return false;
+
+    // Redimensionamiento del arreglo anidado (detalles)
+    if (orden->numDetalles >= orden->capacidadDetalles) {
+        orden->capacidadDetalles *= 2;
+        DetalleOrden* nuevosDetalles = new DetalleOrden[orden->capacidadDetalles];
+        for (int i = 0; i < orden->numDetalles; i++) {
+            nuevosDetalles[i] = orden->detalles[i];
+        }
+        delete[] orden->detalles;
+        orden->detalles = nuevosDetalles;
+    }
+
+    // Descontar del inventario general
+    rep->stock -= cantidad;
+
+    // Guardar el detalle congelando el precio histórico
+    DetalleOrden nuevoDetalle;
+    nuevoDetalle.idRepuesto = idRepuesto;
+    nuevoDetalle.cantidad = cantidad;
+    nuevoDetalle.precioUnitario = rep->precio;
+
+    orden->detalles[orden->numDetalles] = nuevoDetalle;
+    orden->numDetalles++;
+
+    return true;
+}
+
+// 4. Cerrar la Orden de Servicio
+bool cerrarOrdenServicio(SistemaTaller* s, int idOrden, float cobroManoObra, const char* fechaCierre) {
+    OrdenServicio* orden = buscarOrdenPorID(*s, idOrden);
+    if (orden == nullptr || strcmp(orden->estado, "ABIERTA") != 0 || cobroManoObra < 0) return false;
+
+    orden->manoObra = cobroManoObra;
+    strcpy(orden->fechaCierre, fechaCierre);
+    strcpy(orden->estado, "CERRADA");
+
+    return true;
+}
+
+// 5. Calcular Total a Pagar de una Orden
+float calcularTotalOrden(SistemaTaller s, int idOrden) {
+    OrdenServicio* orden = buscarOrdenPorID(s, idOrden);
+    if (orden == nullptr) return 0.0f;
+
+    float totalRepuestos = 0.0f;
+    for (int i = 0; i < orden->numDetalles; i++) {
+        totalRepuestos += (orden->detalles[i].cantidad * orden->detalles[i].precioUnitario);
+    }
+    return orden->manoObra + totalRepuestos;
+}
+
+// ====================================================================
 // --- CAPA DE PRESENTACIÓN: REPUESTOS ---
 // ====================================================================
 
@@ -421,4 +535,104 @@ void menuEntradaMercancia(SistemaTaller* s) {
     } else {
         cout << "ERROR: No se pudo actualizar el stock (ID no encontrado o cantidad invalida).\n";
     }
+}
+
+// ====================================================================
+// --- CAPA DE PRESENTACIÓN: ÓRDENES DE SERVICIO ---
+// ====================================================================
+
+void menuAbrirOrden(SistemaTaller* s) {
+    int idVehiculo, idMecanico;
+    char fecha[11], falla[200];
+
+    cout << "\n--- ABRIR ORDEN DE SERVICIO ---\n";
+    cout << "ID del Vehiculo: "; cin >> idVehiculo;
+    cout << "ID del Mecanico asignado: "; cin >> idMecanico;
+    cout << "Fecha de Apertura (YYYY-MM-DD): "; cin >> fecha;
+    cin.ignore();
+    cout << "Descripcion de la Falla: "; cin.getline(falla, 200);
+
+    OrdenServicio* orden = abrirOrdenServicio(s, idVehiculo, idMecanico, fecha, falla);
+    if (orden != nullptr) {
+        cout << "¡Exito! Orden #" << orden->id << " abierta correctamente.\n";
+    } else {
+        cout << "ERROR: Mecanico excedio limite (3) de ordenes abiertas o datos invalidos.\n";
+    }
+}
+
+void menuAgregarRepuestoOrden(SistemaTaller* s) {
+    int idOrden, idRepuesto, cant;
+    cout << "\n--- AGREGAR REPUESTO A ORDEN ---\n";
+    cout << "ID de la Orden: "; cin >> idOrden;
+    cout << "ID del Repuesto a usar: "; cin >> idRepuesto;
+    cout << "Cantidad a usar: "; cin >> cant;
+
+    if (agregarRepuestoAOrden(s, idOrden, idRepuesto, cant)) {
+        cout << "Repuesto agregado a la orden y descontado del inventario.\n";
+    } else {
+        cout << "ERROR: Stock insuficiente, orden cerrada o ID invalido.\n";
+    }
+}
+
+void menuCerrarOrden(SistemaTaller* s) {
+    int idOrden;
+    float manoObra;
+    char fecha[11];
+    
+    cout << "\n--- CERRAR ORDEN DE SERVICIO ---\n";
+    cout << "ID de la Orden a cerrar: "; cin >> idOrden;
+    cout << "Costo de Mano de Obra ($): "; cin >> manoObra;
+    cout << "Fecha de Cierre (YYYY-MM-DD): "; cin >> fecha;
+
+    if (cerrarOrdenServicio(s, idOrden, manoObra, fecha)) {
+        float total = calcularTotalOrden(*s, idOrden);
+        cout << "¡Orden CERRADA! El total a facturar al cliente es: $" << total << "\n";
+    } else {
+        cout << "ERROR: No se pudo cerrar (orden no encontrada, ya cerrada o monto invalido).\n";
+    }
+}
+
+// ====================================================================
+// --- FUNCIÓN PRINCIPAL (ENTRY POINT) ---
+// ====================================================================
+
+int main() {
+    SistemaTaller miTaller;
+    Taller datos = {"Taller Los Amigos", "J-12345678-9", "Maracaibo, Zulia", "0414-0000000"};
+    inicializarSistema(&miTaller, datos);
+
+    int opcion;
+    do {
+        cout << "\n=========================================\n";
+        cout << "   SISTEMA DE GESTION: " << miTaller.taller.nombre << "\n";
+        cout << "=========================================\n";
+        cout << "1. Registrar Mecanico\n";
+        cout << "2. Listar Mecanicos\n";
+        cout << "3. Registrar Repuesto\n";
+        cout << "4. Listar Inventario\n";
+        cout << "5. Ingresar Mercancia (Stock)\n";
+        cout << "6. Abrir Orden de Servicio\n";
+        cout << "7. Agregar Repuesto a Orden\n";
+        cout << "8. Cerrar Orden de Servicio\n";
+        cout << "9. Salir\n";
+        cout << "=========================================\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1: menuRegistrarMecanico(&miTaller); break;
+            case 2: menuListarMecanicos(&miTaller); break;
+            case 3: menuRegistrarRepuesto(&miTaller); break;
+            case 4: menuListarRepuestos(&miTaller); break;
+            case 5: menuEntradaMercancia(&miTaller); break;
+            case 6: menuAbrirOrden(&miTaller); break;
+            case 7: menuAgregarRepuestoOrden(&miTaller); break;
+            case 8: menuCerrarOrden(&miTaller); break;
+            case 9: cout << "Cerrando el sistema y liberando memoria...\n"; break;
+            default: cout << "Opcion invalida.\n";
+        }
+    } while (opcion != 9);
+
+    liberarSistema(&miTaller);
+    return 0;
 }
