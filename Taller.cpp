@@ -208,3 +208,56 @@ void liberarSistema(SistemaTaller* s) {
 
 // Para probar tu código, luego crearemos el "int main()" que pertenece a la Capa de Presentación
 
+// --- CAPA DE PRESENTACIÓN: MECÁNICOS ---
+
+void menuRegistrarMecanico(SistemaTaller* s) {
+    Mecanico m;
+    cout << "\n--- REGISTRAR NUEVO MECANICO ---\n";
+    cout << "Nombre completo: ";
+    cin.ignore(); // Limpia el búfer de entrada antes de leer líneas con espacios
+    cin.getline(m.nombre, 100);
+    
+    cout << "Cedula: ";
+    cin.getline(m.cedula, 20);
+    
+    cout << "Especialidad (MOTOR, FRENOS, ELECTRICIDAD, SUSPENSION, GENERAL): ";
+    cin.getline(m.especialidad, 20);
+    
+    cout << "Fecha de ingreso (YYYY-MM-DD): ";
+    cin.getline(m.fechaIngreso, 11);
+
+    // Llamamos a la función de lógica para registrar el mecánico
+    Mecanico* resultado = agregarMecanico(s, m);
+    
+    if (resultado != nullptr) {
+        cout << "¡Exito! Mecanico registrado con el ID #" << resultado->id << "\n";
+    } else {
+        cout << "ERROR: No se pudo registrar. Verifique si la cedula esta duplicada o si la especialidad es invalida.\n";
+    }
+}
+
+void menuListarMecanicos(SistemaTaller* s) {
+    int cantidad = 0;
+    // Llamamos a la función lógica que retorna un arreglo de punteros
+    Mecanico** lista = listarMecanicos(*s, &cantidad);
+    
+    if (cantidad == 0 || lista == nullptr) {
+        cout << "\nNo hay mecánicos registrados en el sistema actualmente.\n";
+        return;
+    }
+
+    cout << "\n--- LISTA DE MECANICOS REGISTRADOS ---\n";
+    for (int i = 0; i < cantidad; i++) {
+        // Consultamos cuántas órdenes abiertas tiene este mecánico usando su ID
+        int ordenesAbiertas = contarOrdenesAbiertasMecanico(*s, lista[i]->id);
+        
+        cout << "ID: " << lista[i]->id 
+             << " | Nombre: " << lista[i]->nombre 
+             << " | Cedula: " << lista[i]->cedula 
+             << " | Especialidad: " << lista[i]->especialidad 
+             << " | Ordenes Abiertas: " << ordenesAbiertas << "\n";
+    }
+    
+
+    delete[] lista;
+}
