@@ -106,7 +106,7 @@ void inicializarSistema(SistemaTaller* s, Taller datosTaller) {
     // Usamos la flecha (->) porque 's' es un puntero
     s->taller = datosTaller;
     
-    // 1. Empezamos con el taller vacío (contadores en 0)
+    // 1. Empezamsos con el taller vacío (contadores en 0)
     s->numVehiculos = 0;
     s->numMecanicos = 0;
     s->numRepuestos = 0;
@@ -189,6 +189,19 @@ Vehiculo* agregarVehiculo(SistemaTaller* s, Vehiculo datos) {
     return &(s->vehiculos[posicion]);
 }
 
+// 2. Listar vehículos (Capa de lógica)
+Vehiculo** listarVehiculos(SistemaTaller s, int* cantidad) {
+    *cantidad = s.numVehiculos;
+    if (*cantidad == 0) return nullptr;
+
+    // Alquilamos un arreglo temporal de punteros
+    Vehiculo** lista = new Vehiculo*[*cantidad];
+    for (int i = 0; i < *cantidad; i++) {
+        lista[i] = &s.vehiculos[i];
+    }
+    
+    return lista;
+}
 
 // --- LIBERAR LA MEMORIA (CERRAR EL SISTEMA) ---
 void liberarSistema(SistemaTaller* s) {
@@ -206,7 +219,67 @@ void liberarSistema(SistemaTaller* s) {
     delete[] s->ordenes; 
 }
 
-// Para probar tu código, luego crearemos el "int main()" que pertenece a la Capa de Presentación
+// ====================================================================
+// --- CAPA DE LÓGICA: MECÁNICOS ---
+// ====================================================================
+
+// 1. Contar órdenes abiertas (Regla de negocio crítica)
+int contarOrdenesAbiertasMecanico(SistemaTaller s, int idMecanico) {
+    int contador = 0;
+    // Recorremos todas las órdenes del sistema
+    for (int i = 0; i < s.numOrdenes; i++) {
+        // Si el mecánico coincide Y el estado es exactamente "ABIERTA"
+        if (s.ordenes[i].idMecanico == idMecanico && strcmp(s.ordenes[i].estado, "ABIERTA") == 0) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+// 2. Agregar un nuevo mecánico (Misma estructura de memoria que Vehículos)
+Mecanico* agregarMecanico(SistemaTaller* s, Mecanico datos) {
+    // Validar cédula duplicada
+    for (int i = 0; i < s->numMecanicos; i++) {
+        if (strcmp(datos.cedula, s->mecanicos[i].cedula) == 0) {
+            return nullptr; // Falla: la cédula ya existe
+        }
+    }
+    
+    // Redimensionamiento dinámico automático
+    if (s->numMecanicos == s->capacidadMecanicos) {
+        int nuevaCapacidad = s->capacidadMecanicos * 2;
+        Mecanico* nuevoArreglo = new Mecanico[nuevaCapacidad];
+        
+        for (int i = 0; i < s->numMecanicos; i++) {
+            nuevoArreglo[i] = s->mecanicos[i];
+        }
+        
+        delete[] s->mecanicos; // Demolemos el arreglo viejo
+        s->mecanicos = nuevoArreglo;
+        s->capacidadMecanicos = nuevaCapacidad;
+    }
+    
+    // Guardar, asignar ID y actualizar contadores
+    datos.id = s->siguienteIdMecanico++;
+    s->mecanicos[s->numMecanicos] = datos;
+    s->numMecanicos++;
+    
+    return &(s->mecanicos[s->numMecanicos - 1]);
+}
+
+// 3. Listar mecánicos (Creación de arreglo de punteros temporal)
+Mecanico** listarMecanicos(SistemaTaller s, int* cantidad) {
+    *cantidad = s.numMecanicos;
+    if (*cantidad == 0) return nullptr;
+
+    // Alquilamos un arreglo temporal de punteros para no pasar copias pesadas
+    Mecanico** lista = new Mecanico*[*cantidad];
+    for (int i = 0; i < *cantidad; i++) {
+        lista[i] = &s.mecanicos[i];
+    }
+    
+    return lista;
+}
 
 // --- CAPA DE PRESENTACIÓN: MECÁNICOS ---
 
@@ -236,31 +309,6 @@ void menuRegistrarMecanico(SistemaTaller* s) {
     }
 }
 
-void menuListarMecanicos(SistemaTaller* s) {
-    int cantidad = 0;
-    // Llamamos a la función lógica que retorna un arreglo de punteros
-    Mecanico** lista = listarMecanicos(*s, &cantidad);
-    
-    if (cantidad == 0 || lista == nullptr) {
-        cout << "\nNo hay mecánicos registrados en el sistema actualmente.\n";
-        return;
-    }
-
-    cout << "\n--- LISTA DE MECANICOS REGISTRADOS ---\n";
-    for (int i = 0; i < cantidad; i++) {
-        // Consultamos cuántas órdenes abiertas tiene este mecánico usando su ID
-        int ordenesAbiertas = contarOrdenesAbiertasMecanico(*s, lista[i]->id);
-        
-        cout << "ID: " << lista[i]->id 
-             << " | Nombre: " << lista[i]->nombre 
-             << " | Cedula: " << lista[i]->cedula 
-             << " | Especialidad: " << lista[i]->especialidad 
-             << " | Ordenes Abiertas: " << ordenesAbiertas << "\n";
-    }
-    
-
-    delete[] lista;
-}
 
 // ====================================================================
 // --- CAPA DE LÓGICA: REPUESTOS (INVENTARIO) ---
@@ -342,6 +390,8 @@ Repuesto** listarRepuestos(SistemaTaller s, int* cantidad) {
     }
     return lista;
 }
+
+
 
 // ====================================================================
 // --- CAPA DE LÓGICA: ÓRDENES DE SERVICIO ---
@@ -593,7 +643,92 @@ void menuCerrarOrden(SistemaTaller* s) {
 }
 
 // ====================================================================
-// --- FUNCIÓN PRINCIPAL (ENTRY POINT) ---
+// --- CAPA DE PRESENTACIÓN: VEHÍCULOS---
+// ====================================================================
+
+void menuRegistrarVehiculo(SistemaTaller* s) {
+    Vehiculo v;
+    cout << "\n--- REGISTRAR NUEVO VEHICULO ---\n";
+    
+    cout << "Placa: ";
+    cin.ignore(); // Limpiamos el buffer antes de leer texto
+    cin.getline(v.placa, 10);
+    
+    cout << "Marca: ";
+    cin.getline(v.marca, 50);
+    
+    cout << "Modelo: ";
+    cin.getline(v.modelo, 50);
+    
+    cout << "Anio: ";
+    cin >> v.anio;
+    
+    cout << "Kilometraje: ";
+    cin >> v.kilometraje;
+    
+    // Llamamos a tu función de lógica construida ayer
+    Vehiculo* resultado = agregarVehiculo(s, v);
+    
+    if (resultado != nullptr) {
+        cout << "¡Exito! Vehiculo registrado con el ID #" << resultado->id << " y fecha " << resultado->fechaRegistro << "\n";
+    } else {
+        cout << "ERROR: No se pudo registrar. Verifique el año (1950-2027), kilometraje > 0, o si la placa ya existe.\n";
+    }
+}
+
+void menuListarMecanicos(SistemaTaller* s) {
+    int cantidad = 0;
+    // Llamamos a la función lógica que retorna un arreglo de punteros
+    Mecanico** lista = listarMecanicos(*s, &cantidad);
+    
+    if (cantidad == 0 || lista == nullptr) {
+        cout << "\nNo hay mecanicos registrados en el sistema actualmente.\n";
+        return;
+    }
+
+    cout << "\n--- LISTA DE MECANICOS REGISTRADOS ---\n";
+    for (int i = 0; i < cantidad; i++) {
+        // Consultamos cuántas órdenes abiertas tiene este mecánico usando su ID
+        int ordenesAbiertas = contarOrdenesAbiertasMecanico(*s, lista[i]->id);
+        
+        cout << "ID: " << lista[i]->id 
+             << " | Nombre: " << lista[i]->nombre 
+             << " | Cedula: " << lista[i]->cedula 
+             << " | Especialidad: " << lista[i]->especialidad 
+             << " | Ordenes Abiertas: " << ordenesAbiertas << "\n";
+    }
+    
+    delete[] lista;
+}
+
+// ====================================================================
+// --- FUNCIÓN PRINCIPAL (ENTRY POINT) CORREGIDA ---
+// ====================================================================
+
+void menuListarVehiculos(SistemaTaller* s) {
+    int cantidad = 0;
+    Vehiculo** lista = listarVehiculos(*s, &cantidad);
+    
+    if (cantidad == 0 || lista == nullptr) {
+        cout << "\nNo hay vehiculos registrados en el sistema actualmente.\n";
+        return;
+    }
+
+    cout << "\n--- LISTA DE VEHICULOS REGISTRADOS ---\n";
+    for (int i = 0; i < cantidad; i++) {
+        cout << "ID: " << lista[i]->id 
+             << " | Placa: " << lista[i]->placa 
+             << " | Marca: " << lista[i]->marca 
+             << " | Modelo: " << lista[i]->modelo 
+             << " | Anio: " << lista[i]->anio 
+             << " | Km: " << lista[i]->kilometraje << "\n";
+    }
+    
+    delete[] lista; // Liberar memoria temporal
+}
+
+// ====================================================================
+// --- FUNCIÓN PRINCIPAL (ENTRY POINT) FINAL ---
 // ====================================================================
 
 int main() {
@@ -606,32 +741,36 @@ int main() {
         cout << "\n=========================================\n";
         cout << "   SISTEMA DE GESTION: " << miTaller.taller.nombre << "\n";
         cout << "=========================================\n";
-        cout << "1. Registrar Mecanico\n";
-        cout << "2. Listar Mecanicos\n";
-        cout << "3. Registrar Repuesto\n";
-        cout << "4. Listar Inventario\n";
-        cout << "5. Ingresar Mercancia (Stock)\n";
-        cout << "6. Abrir Orden de Servicio\n";
-        cout << "7. Agregar Repuesto a Orden\n";
-        cout << "8. Cerrar Orden de Servicio\n";
-        cout << "9. Salir\n";
+        cout << "1. Registrar Vehiculo\n";
+        cout << "2. Listar Vehiculos\n";  // <-- ¡Tu nueva opcion!
+        cout << "3. Registrar Mecanico\n";
+        cout << "4. Listar Mecanicos\n";
+        cout << "5. Registrar Repuesto\n";
+        cout << "6. Listar Inventario\n";
+        cout << "7. Ingresar Mercancia (Stock)\n";
+        cout << "8. Abrir Orden de Servicio\n";
+        cout << "9. Agregar Repuesto a Orden\n";
+        cout << "10. Cerrar Orden de Servicio\n";
+        cout << "11. Salir\n";
         cout << "=========================================\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         switch (opcion) {
-            case 1: menuRegistrarMecanico(&miTaller); break;
-            case 2: menuListarMecanicos(&miTaller); break;
-            case 3: menuRegistrarRepuesto(&miTaller); break;
-            case 4: menuListarRepuestos(&miTaller); break;
-            case 5: menuEntradaMercancia(&miTaller); break;
-            case 6: menuAbrirOrden(&miTaller); break;
-            case 7: menuAgregarRepuestoOrden(&miTaller); break;
-            case 8: menuCerrarOrden(&miTaller); break;
-            case 9: cout << "Cerrando el sistema y liberando memoria...\n"; break;
+            case 1: menuRegistrarVehiculo(&miTaller); break;
+            case 2: menuListarVehiculos(&miTaller); break;
+            case 3: menuRegistrarMecanico(&miTaller); break;
+            case 4: menuListarMecanicos(&miTaller); break;
+            case 5: menuRegistrarRepuesto(&miTaller); break;
+            case 6: menuListarRepuestos(&miTaller); break;
+            case 7: menuEntradaMercancia(&miTaller); break;
+            case 8: menuAbrirOrden(&miTaller); break;
+            case 9: menuAgregarRepuestoOrden(&miTaller); break;
+            case 10: menuCerrarOrden(&miTaller); break;
+            case 11: cout << "Cerrando el sistema y liberando memoria...\n"; break;
             default: cout << "Opcion invalida.\n";
         }
-    } while (opcion != 9);
+    } while (opcion != 11);
 
     liberarSistema(&miTaller);
     return 0;
