@@ -1,0 +1,35 @@
+1
+ABC-123
+Toyota
+Corolla
+2015
+50000
+3
+Juan Perez
+V-12345678
+MOTOR
+2023-01-15
+5
+FILT-001
+Filtro Aceite
+Bosch
+15
+10
+2
+2023-10-20
+8
+1
+1
+2026-10-23
+Cambio de aceite
+9
+1
+1
+1
+10
+1
+20
+2026-10-23
+2
+4
+11

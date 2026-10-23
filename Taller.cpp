@@ -754,7 +754,7 @@ int main() {
         cout << "11. Salir\n";
         cout << "=========================================\n";
         cout << "Seleccione una opcion: ";
-        cin >> opcion;
+        if (!(cin >> opcion)) break;
 
         switch (opcion) {
             case 1: menuRegistrarVehiculo(&miTaller); break;

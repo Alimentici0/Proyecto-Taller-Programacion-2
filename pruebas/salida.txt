@@ -1,0 +1,169 @@
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: Marca: Modelo: Anio: Kilometraje: ¡Exito! Vehiculo registrado con el ID #1 y fecha 2026-10-16
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- REGISTRAR NUEVO MECANICO ---
+Nombre completo: Cedula: Especialidad (MOTOR, FRENOS, ELECTRICIDAD, SUSPENSION, GENERAL): Fecha de ingreso (YYYY-MM-DD): ¡Exito! Mecanico registrado con el ID #1
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo (ej. FILT-001): Nombre del repuesto: Marca: Precio unitario ($): Stock inicial: Stock minimo (alerta): Fecha de registro (YYYY-MM-DD): ¡Repuesto registrado exitosamente con ID #1!
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- ABRIR ORDEN DE SERVICIO ---
+ID del Vehiculo: ID del Mecanico asignado: Fecha de Apertura (YYYY-MM-DD): Descripcion de la Falla: ¡Exito! Orden #1 abierta correctamente.
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- AGREGAR REPUESTO A ORDEN ---
+ID de la Orden: ID del Repuesto a usar: Cantidad a usar: Repuesto agregado a la orden y descontado del inventario.
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- CERRAR ORDEN DE SERVICIO ---
+ID de la Orden a cerrar: Costo de Mano de Obra ($): Fecha de Cierre (YYYY-MM-DD): ¡Orden CERRADA! El total a facturar al cliente es: $35
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- LISTA DE VEHICULOS REGISTRADOS ---
+ID: 1 | Placa: ABC-123 | Marca: Toyota | Modelo: Corolla | Anio: 2015 | Km: 50000
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: 
+--- LISTA DE MECANICOS REGISTRADOS ---
+ID: 1 | Nombre: Juan Perez | Cedula: V-12345678 | Especialidad: MOTOR | Ordenes Abiertas: 0
+
+=========================================
+   SISTEMA DE GESTION: Taller Los Amigos
+=========================================
+1. Registrar Vehiculo
+2. Listar Vehiculos
+3. Registrar Mecanico
+4. Listar Mecanicos
+5. Registrar Repuesto
+6. Listar Inventario
+7. Ingresar Mercancia (Stock)
+8. Abrir Orden de Servicio
+9. Agregar Repuesto a Orden
+10. Cerrar Orden de Servicio
+11. Salir
+=========================================
+Seleccione una opcion: Cerrando el sistema y liberando memoria...
