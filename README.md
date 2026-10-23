@@ -1,36 +1,88 @@
-# Proyecto-Taller-Programacion-2
+
+
+```markdown
 # Sistema de Gestión para Taller Mecánico
 
-Sistema de consola en C++ para administrar inventario, personal y operaciones de un taller automotriz. Creado para la materia Taller de Programación 2 de la Universidad Rafael Urdaneta.
+Sistema de consola en C++ diseñado para administrar el inventario, el personal y las operaciones diarias de un taller automotriz. 
 
-## 🏗️ Arquitectura y Restricciones Técnicas
+Integrantes:
+* [Ali Barrientos / 32666898]
+* [Gabriel Zambrano / 32477775]
 
-El diseño aplica las reglas de gestión de memoria de la asignatura:
+## Instrucciones de Compilación y Ejecución
 
-* **Separación de Capas:** Aísla la Capa de Lógica (datos, punteros) de la Capa de Presentación (menús). La capa lógica omite comandos `cin` y `cout`.
-* **Memoria Dinámica:** Usa arreglos dinámicos para Vehículos, Mecánicos, Repuestos y Órdenes. Evita contenedores estándar como `std::vector`. Los arreglos duplican su capacidad al llenarse. Emplea `new` y `delete` para limpiar fugas de memoria.
-* **Memoria Dinámica Anidada:** Cada Orden de Servicio crea un sub-arreglo dinámico para registrar repuestos.
-* **C-Strings:** Trabaja con arreglos nativos (`char[]`) y rechaza `std::string`. Valida cadenas con la librería `<cstring>` (`strcmp`, `strcpy`).
-
-## ⚙️ Módulos del Sistema
-
-1. **Vehículos:** Registra datos del cliente. Valida placas únicas, año (1950-2027) y kilometraje.
-2. **Mecánicos:** Administra técnicos. Bloquea órdenes nuevas para mecánicos con 3 tickets "ABIERTOS".
-3. **Repuestos:** Agrega piezas, define el stock mínimo, lanza alertas de escasez y registra mercancía nueva.
-4. **Órdenes de Servicio:** Abre tickets, asocia piezas, resta stock del inventario y cierra la orden sumando la mano de obra al precio histórico de cada repuesto.
-
-## 🚀 Compilación y Ejecución
-
-Compila el código con `g++` (MinGW) en Windows.
-
-**1. Compilar:**
-Abre la terminal en la carpeta del proyecto y ejecuta:
+**Compilar el código:**
+Ejecuta el compilador MinGW desde la terminal en el directorio raíz del proyecto:
 > `g++ Taller.cpp -o Taller.exe`
 
-**2. Ejecutar:**
-Inicia el programa con:
+**Ejecutar el sistema (Modo interactivo):**
 > `./Taller.exe`
 
-## 👥 Autores
-* Ali Barrientos, CI 32.666.898
-* Gabriel Zambrano, CI. 32477775
+**Ejecutar el sistema (Modo automatizado con archivos):**
+Redirige los archivos de entrada y salida estándar:
+> `cmd /c "Taller.exe < pruebas\entrada.txt > pruebas\salida.txt"`
+
+## Diagrama de Estructuras y Relaciones
+
+El sistema centraliza los datos en `SistemaTaller`, el cual administra cuatro arreglos dinámicos principales. Las órdenes de servicio implementan memoria dinámica anidada.
+
+```text
+SistemaTaller
+ │
+ ├──> vehiculos (Vehiculo[])
+ ├──> mecanicos (Mecanico[])
+ ├──> repuestos (Repuesto[])
+ │
+ └──> ordenes (OrdenServicio[])
+       │
+       └──> detalles (DetalleOrden[])  <-- Relación Orden -> Detalles
+
+```
+
+## Separación de Capas
+
+El proyecto divide el código en dos bloques funcionales estrictos:
+
+* **Capa de Lógica:** Contiene las reglas de negocio, procesa las validaciones (como las búsqueda de cédulas duplicadas) y gestiona la memoria dinámica (`new`/`delete`). No utiliza comandos de entrada/salida (`cin`/`cout`).
+* **Capa de Presentación:** Muestra los menús, captura las entradas del usuario por teclado y llama a las funciones lógicas correspondientes. Muestra mensajes de éxito o error basándose en los valores retornados por la lógica.
+
+## Firmas Diseñadas y Tipos de Retorno
+
+**Módulo de Mecánicos:**
+
+* `Mecanico* agregarMecanico(SistemaTaller* s, Mecanico datos)`
+*Justificación:* Retorna un puntero al mecánico recién creado para confirmar el éxito de la operación. Retorna `nullptr` si la validación falla (cédula duplicada).
+* `Mecanico** listarMecanicos(SistemaTaller s, int* cantidad)`
+*Justificación:* Retorna un arreglo de punteros (`**`). Evita duplicar estructuras pesadas en memoria al enviar la lista a la capa de presentación.
+
+**Módulo de Repuestos:**
+
+* `Repuesto* agregarRepuesto(SistemaTaller* s, Repuesto datos)`
+*Justificación:* Retorna un puntero al repuesto creado. Permite a la presentación acceder al ID generado automáticamente para mostrarlo en pantalla.
+* `bool registrarEntradaRepuesto(SistemaTaller* s, int idRepuesto, int cantidadAgregar)`
+*Justificación:* Retorna un valor booleano. La presentación solo necesita confirmar si la suma al stock se ejecutó (`true`) o falló por ID inexistente (`false`).
+
+**Módulo de Órdenes:**
+
+* `OrdenServicio* abrirOrdenServicio(...)`
+*Justificación:* Retorna un puntero para confirmar la creación y exponer el ID generado. Retorna `nullptr` si el mecánico supera el límite de 3 órdenes abiertas.
+* `bool agregarRepuestoAOrden(SistemaTaller* s, int idOrden, int idRepuesto, int cantidad)`
+*Justificación:* Retorna un booleano para validar el éxito. Falla (`false`) si el stock es insuficiente o la orden ya está cerrada.
+
+## Preguntas de Análisis
+
+**1. `agregarVehiculo` retorna un puntero a un elemento de `s->vehiculos`. Si guardan ese puntero en una variable, registran varios vehículos más y luego lo usan, ¿qué puede ocurrir y por qué?**
+
+Ocurre una lectura de memoria inválida (dangling pointer). Al registrar más vehículos, el arreglo dinámico alcanza su capacidad máxima y activa la función de redimensionamiento. El sistema solicita un nuevo bloque de memoria en la RAM, copia los carros y ejecuta `delete[]` sobre el arreglo original. El puntero guardado en la variable seguirá apuntando a la dirección de memoria vieja, la cual ya fue destruida y devuelta al sistema operativo.
+
+**2. ¿Por qué `DetalleOrden` guarda `precioUnitario` en lugar de consultar el precio del repuesto cada vez que se calcula el total?**
+
+Conserva la integridad histórica de la facturación. Si una orden de servicio consulta el precio dinámicamente desde el inventario maestro, cualquier actualización futura en el precio de la pieza alteraría retroactivamente el total de las facturas cerradas meses atrás. Guardar el `precioUnitario` dentro de `DetalleOrden` congela el valor exacto del momento de la compra.
+
+**3. Cuando se redimensiona el arreglo de órdenes, ¿qué ocurre con el arreglo de detalles de cada orden? ¿Se copia, se comparte o se pierde? Justifiquen con su implementación.**
+
+Se comparte temporalmente y se conserva intacto. En nuestra implementación, el redimensionamiento ejecuta una copia superficial de las estructuras (`nuevoArreglo[i] = s->ordenes[i]`). Esto significa que el puntero interno `detalles` de la nueva orden apunta a la misma dirección de RAM que el puntero de la orden vieja. Al ejecutar `delete[] s->ordenes` para demoler el arreglo principal viejo, no destruimos los arreglos internos (no hay un bucle `delete[] detalles` en ese bloque específico). Por lo tanto, el nuevo arreglo principal hereda el acceso directo a los arreglos de detalles originales sin perder información ni duplicar la memoria.
+
+```
+
+```
