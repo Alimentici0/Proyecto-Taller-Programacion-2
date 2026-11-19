@@ -27,3 +27,6 @@ void imprimirBordeCaja(char relleno);
 // ---- presentacion_menu.cpp: arranque y menu principal ----
 bool pedirYRegistrarTaller();
 void ejecutarMenuPrincipal(const char* nombreTaller);
+
+// ---- presentacion_vehiculos.cpp ----
+void menuVehiculos();

@@ -56,7 +56,7 @@ void ejecutarMenuPrincipal(const char* nombreTaller) {
         if (!leerEntero("Seleccione una opcion: ", opcion)) return;     // fin de la entrada
 
         switch (opcion) {
-            case 1: cout << "(Gestion de vehiculos: pendiente)\n"; break;
+            case 1: menuVehiculos(); break;
             case 2: cout << "(Gestion de mecanicos: pendiente)\n"; break;
             case 3: cout << "(Inventario de repuestos: pendiente)\n"; break;
             case 4: cout << "(Ordenes de servicio: pendiente)\n"; break;
