@@ -67,4 +67,39 @@ Resultado buscarOrdenesDeVehiculo(int idVehiculo, int ids[], int maximo,
 // Para recorrer ordenes.bin por ID (1..total) desde la presentacion.
 Resultado cantidadOrdenesRegistradas(int& total);
 
+// --------------------------------------------------------------------
+// Operaciones sobre el detalle y el estado de la orden
+// --------------------------------------------------------------------
+
+// Solo ordenes ABIERTAS. Cantidad > 0 y stock suficiente (que se
+// descuenta). La linea nueva guarda el precio vigente como precio
+// historico. Si el repuesto ya esta en la orden, acumula las unidades en
+// SU linea (que conserva su precio historico original).
+// Escribe: ordenes.bin (la linea) y despues repuestos.bin (el stock).
+// Errores: ERR_CANTIDAD_INVALIDA, ERR_ORDEN_NO_EXISTE, ERR_ESTADO_INCORRECTO,
+//          ERR_REPUESTO_NO_EXISTE, ERR_REPUESTO_ELIMINADO,
+//          ERR_STOCK_INSUFICIENTE, ERR_LIMITE_LINEAS, ERR_ARCHIVO.
+Resultado agregarRepuestoAOrden(int idOrden, int idRepuesto, int cantidad);
+
+// Solo ordenes ABIERTAS. Elimina la linea COMPLETA y devuelve sus
+// unidades al inventario. Las lineas siguientes se corren una posicion.
+// Escribe: ordenes.bin y despues repuestos.bin.
+// Errores: ERR_ORDEN_NO_EXISTE, ERR_ESTADO_INCORRECTO, ERR_LINEA_NO_EXISTE,
+//          ERR_REPUESTO_NO_EXISTE, ERR_ARCHIVO.
+Resultado quitarRepuestoDeOrden(int idOrden, int idRepuesto);
+
+// Solo ordenes ABIERTAS. Mano de obra >= 0 y la orden debe quedar con al
+// menos una linea o con mano de obra > 0. Fecha de cierre = fecha actual.
+// Escribe: ordenes.bin.
+// Errores: ERR_ORDEN_NO_EXISTE, ERR_ESTADO_INCORRECTO, ERR_MANO_OBRA_INVALIDA,
+//          ERR_ORDEN_VACIA, ERR_ARCHIVO.
+Resultado cerrarOrden(int idOrden, float manoObra);
+
+// Solo ordenes ABIERTAS o CERRADAS. Devuelve al inventario las unidades de
+// TODAS sus lineas. Las lineas se conservan en la orden como historial.
+// Escribe: ordenes.bin (estado ANULADA) y despues repuestos.bin (stock).
+// Errores: ERR_ORDEN_NO_EXISTE, ERR_ESTADO_INCORRECTO,
+//          ERR_REPUESTO_NO_EXISTE, ERR_ARCHIVO.
+Resultado anularOrden(int idOrden);
+
 #endif

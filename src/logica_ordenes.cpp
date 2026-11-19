@@ -1,6 +1,7 @@
 #include "logica_ordenes.h"
 #include "persistencia_vehiculos.h"
 #include "persistencia_mecanicos.h"
+#include "persistencia_repuestos.h"
 #include "logica_mecanicos.h"
 #include "utilidades.h"
 
@@ -171,4 +172,156 @@ Resultado abrirOrden(int idVehiculo, int idMecanico, int kilometrajeIngreso,
 
     veh.kilometraje = kilometrajeIngreso;          // 2) vehiculos.bin
     return sobrescribirVehiculo(veh);
+}
+
+// --------------------------------------------------------------------
+// Agregar repuesto a una orden
+//
+// ORDEN DE ESCRITURA: 1) ordenes.bin  2) repuestos.bin.
+// La orden es el registro de lo que se consumio; el stock es un valor
+// derivado. Si el programa se interrumpe entre las dos escrituras queda
+// una linea en la orden con el stock sin descontar (hay evidencia y se
+// puede corregir). El orden inverso dejaria stock descontado SIN rastro.
+// --------------------------------------------------------------------
+Resultado agregarRepuestoAOrden(int idOrden, int idRepuesto, int cantidad) {
+    // ---- VALIDACIONES ----
+    if (cantidad <= 0) return ERR_CANTIDAD_INVALIDA;
+
+    OrdenServicio orden;
+    Resultado r = cargarOrden(idOrden, orden);
+    if (r != EXITO) return r;
+    if (strcmp(orden.estado, ESTADO_ABIERTA) != 0) return ERR_ESTADO_INCORRECTO;
+
+    Repuesto rep;
+    r = leerRepuestoPorID(idRepuesto, rep);
+    if (r == ERR_NO_EXISTE) return ERR_REPUESTO_NO_EXISTE;
+    if (r != EXITO) return r;
+    if (rep.eliminado) return ERR_REPUESTO_ELIMINADO;
+    if (rep.stock < cantidad) return ERR_STOCK_INSUFICIENTE;
+
+    // ¿El repuesto ya esta en la orden? Entonces se acumula en su linea
+    int posicion = -1;
+    for (int i = 0; i < orden.numLineas; i++) {
+        if (orden.lineas[i].idRepuesto == idRepuesto) {
+            posicion = i;
+            break;
+        }
+    }
+
+    if (posicion >= 0) {
+        orden.lineas[posicion].cantidad += cantidad;      // conserva su precio historico
+    } else {
+        if (orden.numLineas >= MAX_LINEAS_ORDEN) return ERR_LIMITE_LINEAS;
+        LineaDetalle nueva;
+        nueva.idRepuesto = idRepuesto;
+        nueva.cantidad = cantidad;
+        nueva.precioUnitario = rep.precio;                // precio historico = vigente hoy
+        orden.lineas[orden.numLineas] = nueva;
+        orden.numLineas++;
+    }
+
+    // ---- ESCRITURAS ----
+    r = sobrescribirOrden(orden);                         // 1) ordenes.bin
+    if (r != EXITO) return r;
+
+    rep.stock -= cantidad;                                // 2) repuestos.bin
+    return sobrescribirRepuesto(rep);
+}
+
+// --------------------------------------------------------------------
+// Quitar repuesto de una orden
+// ORDEN DE ESCRITURA: 1) ordenes.bin  2) repuestos.bin (igual que agregar)
+// --------------------------------------------------------------------
+Resultado quitarRepuestoDeOrden(int idOrden, int idRepuesto) {
+    // ---- VALIDACIONES ----
+    OrdenServicio orden;
+    Resultado r = cargarOrden(idOrden, orden);
+    if (r != EXITO) return r;
+    if (strcmp(orden.estado, ESTADO_ABIERTA) != 0) return ERR_ESTADO_INCORRECTO;
+
+    int posicion = -1;
+    for (int i = 0; i < orden.numLineas; i++) {
+        if (orden.lineas[i].idRepuesto == idRepuesto) {
+            posicion = i;
+            break;
+        }
+    }
+    if (posicion < 0) return ERR_LINEA_NO_EXISTE;
+
+    // El repuesto debe poder leerse ANTES de tocar la orden
+    Repuesto rep;
+    r = leerRepuestoPorID(idRepuesto, rep);
+    if (r == ERR_NO_EXISTE) return ERR_REPUESTO_NO_EXISTE;
+    if (r != EXITO) return r;
+
+    int unidadesADevolver = orden.lineas[posicion].cantidad;
+
+    // Quitar la linea: las siguientes se corren una posicion hacia arriba
+    // y la ultima queda en ceros (el arreglo es fijo, no se achica).
+    for (int i = posicion; i < orden.numLineas - 1; i++) {
+        orden.lineas[i] = orden.lineas[i + 1];
+    }
+    memset(&orden.lineas[orden.numLineas - 1], 0, sizeof(LineaDetalle));
+    orden.numLineas--;
+
+    // ---- ESCRITURAS ----
+    r = sobrescribirOrden(orden);                         // 1) ordenes.bin
+    if (r != EXITO) return r;
+
+    rep.stock += unidadesADevolver;                       // 2) repuestos.bin
+    return sobrescribirRepuesto(rep);
+}
+
+// --------------------------------------------------------------------
+// Cerrar orden (solo escribe ordenes.bin)
+// --------------------------------------------------------------------
+Resultado cerrarOrden(int idOrden, float manoObra) {
+    OrdenServicio orden;
+    Resultado r = cargarOrden(idOrden, orden);
+    if (r != EXITO) return r;
+    if (strcmp(orden.estado, ESTADO_ABIERTA) != 0) return ERR_ESTADO_INCORRECTO;
+    if (manoObra < 0) return ERR_MANO_OBRA_INVALIDA;
+    if (orden.numLineas == 0 && manoObra <= 0) return ERR_ORDEN_VACIA;
+
+    orden.manoObra = manoObra;
+    obtenerFechaActual(orden.fechaCierre);
+    copiarTexto(orden.estado, sizeof(orden.estado), ESTADO_CERRADA);
+    return sobrescribirOrden(orden);
+}
+
+// --------------------------------------------------------------------
+// Anular orden
+// ORDEN DE ESCRITURA: 1) ordenes.bin (estado ANULADA)  2) repuestos.bin
+// (un registro por cada linea). Todos los repuestos se leen y se
+// validan ANTES de la primera escritura.
+// --------------------------------------------------------------------
+Resultado anularOrden(int idOrden) {
+    // ---- VALIDACIONES ----
+    OrdenServicio orden;
+    Resultado r = cargarOrden(idOrden, orden);
+    if (r != EXITO) return r;
+    if (strcmp(orden.estado, ESTADO_ANULADA) == 0) return ERR_ESTADO_INCORRECTO;
+    // (ABIERTA y CERRADA se pueden anular)
+
+    for (int i = 0; i < orden.numLineas; i++) {
+        Repuesto rep;
+        r = leerRepuestoPorID(orden.lineas[i].idRepuesto, rep);
+        if (r == ERR_NO_EXISTE) return ERR_REPUESTO_NO_EXISTE;
+        if (r != EXITO) return r;
+    }
+
+    // ---- ESCRITURAS ----
+    copiarTexto(orden.estado, sizeof(orden.estado), ESTADO_ANULADA);
+    r = sobrescribirOrden(orden);                         // 1) ordenes.bin
+    if (r != EXITO) return r;
+
+    for (int i = 0; i < orden.numLineas; i++) {           // 2) repuestos.bin
+        Repuesto rep;
+        r = leerRepuestoPorID(orden.lineas[i].idRepuesto, rep);
+        if (r != EXITO) return r;
+        rep.stock += orden.lineas[i].cantidad;
+        r = sobrescribirRepuesto(rep);
+        if (r != EXITO) return r;
+    }
+    return EXITO;
 }
