@@ -1,0 +1,322 @@
+
+=== PRIMER ARRANQUE: DATOS DEL TALLER ===
+Nombre del taller: Autoservicio El Lago C.A.
+RIF: J-30123456-7
+Direccion: Av. 5 de Julio, Maracaibo
+Telefono: 0261-7001234
+Taller registrado correctamente.
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 1
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: AA111AA
+Marca: Toyota
+Modelo: Corolla
+Anio: 2015
+Kilometraje: 85000
+Nombre del propietario: Carlos Rivas
+Cedula del propietario: V-1111
+Telefono del propietario: 0414-1
+Exito! Vehiculo Toyota Corolla registrado con el ID #1.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: BB222BB
+Marca: Chevrolet
+Modelo: Aveo
+Anio: 2012
+Kilometraje: 120000
+Nombre del propietario: Maria Gonzalez
+Cedula del propietario: V-2222
+Telefono del propietario: 0424-2
+Exito! Vehiculo Chevrolet Aveo registrado con el ID #2.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: CC333CC
+Marca: Ford
+Modelo: Fiesta
+Anio: 2018
+Kilometraje: 45000
+Nombre del propietario: Luis Fernandez
+Cedula del propietario: V-3333
+Telefono del propietario: 0412-3
+Exito! Vehiculo Ford Fiesta registrado con el ID #3.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 2
+
+--- LISTA DE VEHICULOS REGISTRADOS ---
+ID: 1 | Placa: AA111AA | Toyota Corolla | Anio: 2015 | Km: 85000 | Propietario: Carlos Rivas
+ID: 2 | Placa: BB222BB | Chevrolet Aveo | Anio: 2012 | Km: 120000 | Propietario: Maria Gonzalez
+ID: 3 | Placa: CC333CC | Ford Fiesta | Anio: 2018 | Km: 45000 | Propietario: Luis Fernandez
+Total: 3 vehiculo(s).
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 2
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Jose Perez
+Cedula: V-100
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): MOTOR
+Fecha de ingreso (AAAA-MM-DD): 2018-03-12
+Exito! Mecanico Jose Perez registrado con el ID #1.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Ana Villalobos
+Cedula: V-200
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): FRENOS
+Fecha de ingreso (AAAA-MM-DD): 2019-07-01
+Exito! Mecanico Ana Villalobos registrado con el ID #2.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 2
+
+--- LISTA DE MECANICOS ---
+ID: 1 | Jose Perez | Cedula: V-100 | MOTOR | Ingreso: 2018-03-12 | Ordenes abiertas: 0
+ID: 2 | Ana Villalobos | Cedula: V-200 | FRENOS | Ingreso: 2019-07-01 | Ordenes abiertas: 0
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: FIL-01
+Nombre: Filtro de aceite
+Marca (opcional): Fram
+Precio unitario: 6.5
+Stock inicial: 40
+Stock minimo: 10
+Exito! Repuesto Filtro de aceite registrado con el ID #1.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: PAS-01
+Nombre: Pastillas de freno
+Marca (opcional): Brembo
+Precio unitario: 28
+Stock inicial: 15
+Stock minimo: 5
+Exito! Repuesto Pastillas de freno registrado con el ID #2.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: BUJ-01
+Nombre: Bujia NGK
+Marca (opcional): NGK
+Precio unitario: 4.25
+Stock inicial: 60
+Stock minimo: 20
+Exito! Repuesto Bujia NGK registrado con el ID #3.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: BAT-01
+Nombre: Bateria 12V
+Marca (opcional): Bosch
+Precio unitario: 95
+Stock inicial: 6
+Stock minimo: 3
+Exito! Repuesto Bateria 12V registrado con el ID #4.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 2
+
+--- INVENTARIO DE REPUESTOS ---
+ID: 1 | FIL-01 | Filtro de aceite (Fram) | $6.50 | Stock: 40 (min 10)
+ID: 2 | PAS-01 | Pastillas de freno (Brembo) | $28.00 | Stock: 15 (min 5)
+ID: 3 | BUJ-01 | Bujia NGK (NGK) | $4.25 | Stock: 60 (min 20)
+ID: 4 | BAT-01 | Bateria 12V (Bosch) | $95.00 | Stock: 6 (min 3)
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

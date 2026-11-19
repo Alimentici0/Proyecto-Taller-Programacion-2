@@ -1,0 +1,583 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: abc
+  Entrada invalida: escriba un numero entero.
+Seleccione una opcion: 9
+Opcion invalida.
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 1
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: AA123BB
+Marca: Toyota
+Modelo: Yaris
+Anio: 2020
+Kilometraje: 1000
+Nombre del propietario: X
+Cedula del propietario: V-0
+Telefono del propietario: 0
+ERROR: ya existe un vehiculo activo con la placa AA123BB.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: ZZ111ZZ
+Marca: Toyota
+Modelo: Yaris
+Anio: 1900
+Kilometraje: 1000
+Nombre del propietario: X
+Cedula del propietario: V-0
+Telefono del propietario: 0
+ERROR: El anio debe estar entre 1950 y 2027.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: ZZ111ZZ
+Marca: Toyota
+Modelo: Yaris
+Anio: abc
+  Entrada invalida: escriba un numero entero.
+Anio: 2020
+Kilometraje: -5
+Nombre del propietario: X
+Cedula del propietario: V-0
+Telefono del propietario: 0
+ERROR: Kilometraje invalido (debe ser >= 0 y no menor al ya registrado del vehiculo).
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 7
+
+--- ELIMINAR VEHICULO ---
+ID del vehiculo: 1
+ERROR: no se puede eliminar el vehiculo Toyota Corolla (placa AA123BB): tiene ordenes de servicio registradas.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 7
+
+--- ELIMINAR VEHICULO ---
+ID del vehiculo: 999
+ERROR: No existe un registro con ese ID.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 2
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Otro Mecanico
+Cedula: V-12345678
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): MOTOR
+Fecha de ingreso (AAAA-MM-DD): 2020-01-01
+ERROR: ya existe un mecanico con la cedula V-12345678.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Otro Mecanico
+Cedula: V-5
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): PINTURA
+Fecha de ingreso (AAAA-MM-DD): 2020-01-01
+ERROR: Especialidad invalida. Use MOTOR, FRENOS, ELECTRICIDAD, SUSPENSION o GENERAL.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Otro Mecanico
+Cedula: V-5
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): MOTOR
+Fecha de ingreso (AAAA-MM-DD): 2020-02-30
+ERROR: Fecha invalida. Use el formato AAAA-MM-DD.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: FIL-ACE-01
+Nombre: Filtro
+Marca (opcional): X
+Precio unitario: 5
+Stock inicial: 1
+Stock minimo: 1
+ERROR: ya existe un repuesto activo con el codigo FIL-ACE-01.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: NUEVO-1
+Nombre: Repuesto
+Marca (opcional): X
+Precio unitario: 0
+Stock inicial: 1
+Stock minimo: 1
+ERROR: El precio debe ser mayor que 0.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 8
+
+--- ELIMINAR REPUESTO ---
+ID del repuesto: 1
+ERROR: no se puede eliminar FIL-ACE-01 - Filtro de aceite: aparece en el detalle de alguna orden de servicio.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 1
+  -> AA123BB Toyota Corolla (km actual: 90500)
+ID del mecanico: 1
+  -> Jose Perez (MOTOR)
+Kilometraje de ingreso: 90000
+Descripcion de la falla: Otra orden
+ERROR: el vehiculo AA123BB ya tiene una orden ABIERTA.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 3
+  -> AC789EF Ford Fiesta (km actual: 45500)
+ID del mecanico: 3
+Kilometraje de ingreso: 46000
+Descripcion de la falla: Orden con mecanico de baja
+ERROR: El mecanico indicado esta dado de baja y no puede recibir ordenes.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 4
+  -> AD012GH Honda Civic (km actual: 30800)
+ID del mecanico: 2
+  -> Ana Villalobos (FRENOS)
+Kilometraje de ingreso: 100
+Descripcion de la falla: Km menor al del vehiculo
+ERROR: el kilometraje de ingreso (100) no puede ser menor al registrado del vehiculo (30800).
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 3
+  -> AC789EF Ford Fiesta (km actual: 45500)
+ID del mecanico: 1
+  -> Jose Perez (MOTOR)
+Kilometraje de ingreso: 46000
+Descripcion de la falla: Primera orden de Jose
+Exito! Orden #11 abierta para AC789EF - Ford Fiesta (2018) con el mecanico Jose Perez.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 4
+  -> AD012GH Honda Civic (km actual: 30800)
+ID del mecanico: 1
+  -> Jose Perez (MOTOR)
+Kilometraje de ingreso: 31000
+Descripcion de la falla: Segunda orden de Jose
+Exito! Orden #12 abierta para AD012GH - Honda Civic (2020) con el mecanico Jose Perez.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 5
+  -> AE345IJ Hyundai Accent (km actual: 98500)
+ID del mecanico: 1
+  -> Jose Perez (MOTOR)
+Kilometraje de ingreso: 99000
+Descripcion de la falla: Tercera (rechazada por limite)
+ERROR: Jose Perez ya tiene 3 ordenes ABIERTAS (limite).
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 11
+ID del repuesto: 11
+  -> ALT-001 Alternador 90A | Stock disponible: 2 | Precio: $120.00
+Cantidad: 50
+ERROR: stock insuficiente de Alternador 90A: hay 2 y se pidieron 50.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 5
+  -> BAT-12V-01 Bateria 12V 75Ah | Stock disponible: 4 | Precio: $95.00
+Cantidad: 1
+ERROR: la orden #1 esta CERRADA; solo se pueden agregar repuestos a ordenes ABIERTAS.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 999
+ID del repuesto: 1
+  -> FIL-ACE-01 Filtro de aceite | Stock disponible: 38 | Precio: $6.50
+Cantidad: 1
+ERROR: La orden indicada no existe.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 11
+ID del repuesto: 5
+  -> BAT-12V-01 Bateria 12V 75Ah | Stock disponible: 4 | Precio: $95.00
+Cantidad: 0
+ERROR: La cantidad debe ser mayor que 0.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 7
+
+--- CERRAR ORDEN ---
+ID de la orden: 11
+Mano de obra ($): 0
+ERROR: No se puede cerrar: la orden necesita al menos un repuesto o mano de obra > 0.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 6
+
+--- QUITAR REPUESTO DE UNA ORDEN ---
+ID de la orden: 11
+ID del repuesto a quitar: 4
+ERROR: Ese repuesto no esta en el detalle de la orden.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 8
+
+--- ANULAR ORDEN ---
+ID de la orden: 5
+ERROR: la orden #5 esta ANULADA; solo se pueden anular ordenes ABIERTAS o CERRADAS.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

@@ -1,0 +1,79 @@
+Autoservicio El Lago C.A.
+J-30123456-7
+Av. 5 de Julio, Maracaibo
+0261-7001234
+1
+1
+AA111AA
+Toyota
+Corolla
+2015
+85000
+Carlos Rivas
+V-1111
+0414-1
+1
+BB222BB
+Chevrolet
+Aveo
+2012
+120000
+Maria Gonzalez
+V-2222
+0424-2
+1
+CC333CC
+Ford
+Fiesta
+2018
+45000
+Luis Fernandez
+V-3333
+0412-3
+2
+0
+2
+1
+Jose Perez
+V-100
+MOTOR
+2018-03-12
+1
+Ana Villalobos
+V-200
+FRENOS
+2019-07-01
+2
+0
+3
+1
+FIL-01
+Filtro de aceite
+Fram
+6.5
+40
+10
+1
+PAS-01
+Pastillas de freno
+Brembo
+28
+15
+5
+1
+BUJ-01
+Bujia NGK
+NGK
+4.25
+60
+20
+1
+BAT-01
+Bateria 12V
+Bosch
+95
+6
+3
+2
+0
+0

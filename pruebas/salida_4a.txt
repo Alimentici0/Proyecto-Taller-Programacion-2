@@ -1,0 +1,817 @@
+
+=== PRIMER ARRANQUE: DATOS DEL TALLER ===
+Nombre del taller: Autoservicio El Lago C.A.
+RIF: J-30123456-7
+Direccion: Av. 5 de Julio, Maracaibo
+Telefono: 0261-7001234
+Taller registrado correctamente.
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 1
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: AA111AA
+Marca: Toyota
+Modelo: Corolla
+Anio: 2015
+Kilometraje: 85000
+Nombre del propietario: Carlos Rivas
+Cedula del propietario: V-1
+Telefono del propietario: 0414
+Exito! Vehiculo Toyota Corolla registrado con el ID #1.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 2
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Jose Perez
+Cedula: V-100
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): MOTOR
+Fecha de ingreso (AAAA-MM-DD): 2018-03-12
+Exito! Mecanico Jose Perez registrado con el ID #1.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-01
+Nombre: Repuesto numero 1
+Marca (opcional): Generico
+Precio unitario: 1.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 1 registrado con el ID #1.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-02
+Nombre: Repuesto numero 2
+Marca (opcional): Generico
+Precio unitario: 3.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 2 registrado con el ID #2.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-03
+Nombre: Repuesto numero 3
+Marca (opcional): Generico
+Precio unitario: 4.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 3 registrado con el ID #3.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-04
+Nombre: Repuesto numero 4
+Marca (opcional): Generico
+Precio unitario: 6.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 4 registrado con el ID #4.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-05
+Nombre: Repuesto numero 5
+Marca (opcional): Generico
+Precio unitario: 7.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 5 registrado con el ID #5.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-06
+Nombre: Repuesto numero 6
+Marca (opcional): Generico
+Precio unitario: 9.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 6 registrado con el ID #6.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-07
+Nombre: Repuesto numero 7
+Marca (opcional): Generico
+Precio unitario: 10.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 7 registrado con el ID #7.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-08
+Nombre: Repuesto numero 8
+Marca (opcional): Generico
+Precio unitario: 12.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 8 registrado con el ID #8.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-09
+Nombre: Repuesto numero 9
+Marca (opcional): Generico
+Precio unitario: 13.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 9 registrado con el ID #9.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-10
+Nombre: Repuesto numero 10
+Marca (opcional): Generico
+Precio unitario: 15.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 10 registrado con el ID #10.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-11
+Nombre: Repuesto numero 11
+Marca (opcional): Generico
+Precio unitario: 16.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 11 registrado con el ID #11.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-12
+Nombre: Repuesto numero 12
+Marca (opcional): Generico
+Precio unitario: 18.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 12 registrado con el ID #12.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-13
+Nombre: Repuesto numero 13
+Marca (opcional): Generico
+Precio unitario: 19.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 13 registrado con el ID #13.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-14
+Nombre: Repuesto numero 14
+Marca (opcional): Generico
+Precio unitario: 21.0
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 14 registrado con el ID #14.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: REP-15
+Nombre: Repuesto numero 15
+Marca (opcional): Generico
+Precio unitario: 22.5
+Stock inicial: 10
+Stock minimo: 2
+Exito! Repuesto Repuesto numero 15 registrado con el ID #15.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 1
+  -> AA111AA Toyota Corolla (km actual: 85000)
+ID del mecanico: 1
+  -> Jose Perez (MOTOR)
+Kilometraje de ingreso: 86000
+Descripcion de la falla: Revision completa
+Exito! Orden #1 abierta para AA111AA - Toyota Corolla (2015) con el mecanico Jose Perez.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 1
+  -> REP-01 Repuesto numero 1 | Stock disponible: 10 | Precio: $1.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 1 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 2
+  -> REP-02 Repuesto numero 2 | Stock disponible: 10 | Precio: $3.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 2 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 3
+  -> REP-03 Repuesto numero 3 | Stock disponible: 10 | Precio: $4.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 3 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 4
+  -> REP-04 Repuesto numero 4 | Stock disponible: 10 | Precio: $6.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 4 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 5
+  -> REP-05 Repuesto numero 5 | Stock disponible: 10 | Precio: $7.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 5 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 6
+  -> REP-06 Repuesto numero 6 | Stock disponible: 10 | Precio: $9.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 6 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 7
+  -> REP-07 Repuesto numero 7 | Stock disponible: 10 | Precio: $10.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 7 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 8
+  -> REP-08 Repuesto numero 8 | Stock disponible: 10 | Precio: $12.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 8 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 9
+  -> REP-09 Repuesto numero 9 | Stock disponible: 10 | Precio: $13.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 9 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 10
+  -> REP-10 Repuesto numero 10 | Stock disponible: 10 | Precio: $15.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 10 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 11
+  -> REP-11 Repuesto numero 11 | Stock disponible: 10 | Precio: $16.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 11 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 12
+  -> REP-12 Repuesto numero 12 | Stock disponible: 10 | Precio: $18.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 12 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 13
+  -> REP-13 Repuesto numero 13 | Stock disponible: 10 | Precio: $19.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 13 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 14
+  -> REP-14 Repuesto numero 14 | Stock disponible: 10 | Precio: $21.00
+Cantidad: 1
+Agregado: 1 x Repuesto numero 14 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 15
+  -> REP-15 Repuesto numero 15 | Stock disponible: 10 | Precio: $22.50
+Cantidad: 1
+Agregado: 1 x Repuesto numero 15 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 1
+  ORDEN #1 [ABIERTA]
+  Apertura: 2026-11-18
+  Vehiculo: AA111AA - Toyota Corolla (2015) | Propietario: Carlos Rivas
+  Mecanico: Jose Perez
+  Falla: Revision completa
+  Km de ingreso: 86000
+  Detalle de repuestos:
+    1. REP-01 Repuesto numero 1  x1 a $1.50 = $1.50
+    2. REP-02 Repuesto numero 2  x1 a $3.00 = $3.00
+    3. REP-03 Repuesto numero 3  x1 a $4.50 = $4.50
+    4. REP-04 Repuesto numero 4  x1 a $6.00 = $6.00
+    5. REP-05 Repuesto numero 5  x1 a $7.50 = $7.50
+    6. REP-06 Repuesto numero 6  x1 a $9.00 = $9.00
+    7. REP-07 Repuesto numero 7  x1 a $10.50 = $10.50
+    8. REP-08 Repuesto numero 8  x1 a $12.00 = $12.00
+    9. REP-09 Repuesto numero 9  x1 a $13.50 = $13.50
+    10. REP-10 Repuesto numero 10  x1 a $15.00 = $15.00
+    11. REP-11 Repuesto numero 11  x1 a $16.50 = $16.50
+    12. REP-12 Repuesto numero 12  x1 a $18.00 = $18.00
+    13. REP-13 Repuesto numero 13  x1 a $19.50 = $19.50
+    14. REP-14 Repuesto numero 14  x1 a $21.00 = $21.00
+    15. REP-15 Repuesto numero 15  x1 a $22.50 = $22.50
+  Repuestos: $180.00 | Mano de obra: $0.00 | TOTAL: $180.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

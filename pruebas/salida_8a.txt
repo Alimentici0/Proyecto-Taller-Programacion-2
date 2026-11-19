@@ -1,0 +1,196 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 3
+
+--- LISTAR ORDENES POR ESTADO ---
+Estado (ABIERTA/CERRADA/ANULADA): ABIERTA
+Orden #8 | 2026-11-10 | ABIERTA | AA123BB Toyota Corolla (2015) | Mec: Marta Soto | Total: $55.00
+Orden #9 | 2026-11-12 | ABIERTA | AB456CD Chevrolet Aveo (2012) | Mec: Jose Perez | Total: $55.50
+2 orden(es) ABIERTA.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 3
+
+--- LISTAR ORDENES POR ESTADO ---
+Estado (ABIERTA/CERRADA/ANULADA): CERRADA
+Orden #1 | 2026-09-03 | CERRADA | AA123BB Toyota Corolla (2015) | Mec: Jose Perez | Total: $102.70
+Orden #2 | 2026-09-10 | CERRADA | AB456CD Chevrolet Aveo (2012) | Mec: Ana Villalobos | Total: $74.00
+Orden #3 | 2026-09-15 | CERRADA | AC789EF Ford Fiesta (2018) | Mec: Luis Fuenmayor | Total: $115.00
+Orden #4 | 2026-09-22 | CERRADA | AD012GH Honda Civic (2020) | Mec: Jose Perez | Total: $233.20
+Orden #6 | 2026-10-08 | CERRADA | AF678KL Kia Rio (2019) | Mec: Marta Soto | Total: $128.20
+Orden #7 | 2026-10-14 | CERRADA | AG901MN Toyota Hilux (2014) | Mec: Luis Fuenmayor | Total: $265.00
+6 orden(es) CERRADA.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 3
+
+--- LISTAR ORDENES POR ESTADO ---
+Estado (ABIERTA/CERRADA/ANULADA): ANULADA
+Orden #5 | 2026-10-01 | ANULADA | AE345IJ Hyundai Accent (2016) | Mec: Ana Villalobos | Total: $218.00
+Orden #10 | 2026-11-05 | ANULADA | AH234OP Nissan Sentra (2021) | Mec: Ana Villalobos | Total: $25.00
+2 orden(es) ANULADA.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 5
+
+--- REPORTES ---
+1. Historial de un vehiculo
+2. Repuestos mas usados (top 10)
+3. Facturacion por mecanico
+0. Volver
+Seleccione una opcion: 1
+
+=== REPORTE 1: HISTORIAL DE UN VEHICULO ===
+Placa: AA123BB
+
+Vehiculo: AA123BB - Toyota Corolla (2015) | Propietario: Carlos Rivas
+-----
+  ORDEN #1 [CERRADA]
+  Apertura: 2026-09-03 | Cierre: 2026-09-03
+  Vehiculo: AA123BB - Toyota Corolla (2015) | Propietario: Carlos Rivas
+  Mecanico: Jose Perez
+  Falla: Cambio de aceite y filtros
+  Km de ingreso: 86000
+  Detalle de repuestos:
+    1. ACE-10W40 Aceite 10W-40 1L  x4 a $7.80 = $31.20
+    2. FIL-ACE-01 Filtro de aceite  x1 a $6.50 = $6.50
+    3. FIL-AIR-01 Filtro de aire  x1 a $8.00 = $8.00
+    4. BUJ-NGK-01 Bujia NGK  x4 a $4.25 = $17.00
+  Repuestos: $62.70 | Mano de obra: $40.00 | TOTAL: $102.70
+-----
+  ORDEN #8 [ABIERTA]
+  Apertura: 2026-11-10
+  Vehiculo: AA123BB - Toyota Corolla (2015) | Propietario: Carlos Rivas
+  Mecanico: Marta Soto
+  Falla: Ruido en la suspension
+  Km de ingreso: 90500
+  Detalle de repuestos:
+    1. AMO-DEL-01 Amortiguador delantero  x1 a $55.00 = $55.00
+  Repuestos: $55.00 | Mano de obra: $0.00 | TOTAL: $55.00
+-----
+2 orden(es).
+Total facturado (solo ordenes CERRADAS): $102.70
+
+--- REPORTES ---
+1. Historial de un vehiculo
+2. Repuestos mas usados (top 10)
+3. Facturacion por mecanico
+0. Volver
+Seleccione una opcion: 2
+
+=== REPORTE 2: REPUESTOS MAS USADOS (ordenes CERRADAS) ===
+Pos  Codigo        Repuesto                          Unidades
+---------------------------------------------------------------
+1    ACE-10W40     Aceite 10W-40 1L                  12
+2    BUJ-NGK-01    Bujia NGK                         8
+3    LIQ-FRE-01    Liquido de frenos DOT4            3
+4    FIL-ACE-01    Filtro de aceite                  2
+5    FIL-AIR-01    Filtro de aire                    2
+6    BAT-12V-01    Bateria 12V 75Ah                  2
+7    REF-CLT-01    Refrigerante 1L                   2
+8    PAS-FRE-01    Pastillas de freno delanteras     1
+9    COR-DIS-01    Correa de distribucion            1
+10   BOM-AGU-01    Bomba de agua                     1
+
+--- REPORTES ---
+1. Historial de un vehiculo
+2. Repuestos mas usados (top 10)
+3. Facturacion por mecanico
+0. Volver
+Seleccione una opcion: 3
+
+=== REPORTE 3: FACTURACION POR MECANICO (ordenes CERRADAS) ===
+Mecanico                    Ordenes     Mano obra     Repuestos         Total
+-----------------------------------------------------------------------------
+Jose Perez                        2       $160.00       $175.90       $335.90
+Ana Villalobos                    1        $35.00        $39.00        $74.00
+Luis Fuenmayor (baja)             2        $70.00       $310.00       $380.00
+Marta Soto                        1        $60.00        $68.20       $128.20
+-----------------------------------------------------------------------------
+TOTAL TALLER                      6       $325.00       $593.10       $918.10
+
+--- REPORTES ---
+1. Historial de un vehiculo
+2. Repuestos mas usados (top 10)
+3. Facturacion por mecanico
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

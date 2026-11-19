@@ -1,0 +1,1144 @@
+
+=== PRIMER ARRANQUE: DATOS DEL TALLER ===
+Nombre del taller: Autoservicio El Lago C.A.
+RIF: J-30123456-7
+Direccion: Av. 5 de Julio, Maracaibo
+Telefono: 0261-7001234
+Taller registrado correctamente.
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 1
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: AA111AA
+Marca: Toyota
+Modelo: Corolla
+Anio: 2015
+Kilometraje: 1000
+Nombre del propietario: Carlos Rivas
+Cedula del propietario: V-1
+Telefono del propietario: 0414
+Exito! Vehiculo Toyota Corolla registrado con el ID #1.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 2
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO MECANICO ---
+Nombre: Jose Perez
+Cedula: V-100
+Especialidad (MOTOR/FRENOS/ELECTRICIDAD/SUSPENSION/GENERAL): MOTOR
+Fecha de ingreso (AAAA-MM-DD): 2018-03-12
+Exito! Mecanico Jose Perez registrado con el ID #1.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-01
+Nombre: Repuesto limite 1
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 1 registrado con el ID #1.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-02
+Nombre: Repuesto limite 2
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 2 registrado con el ID #2.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-03
+Nombre: Repuesto limite 3
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 3 registrado con el ID #3.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-04
+Nombre: Repuesto limite 4
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 4 registrado con el ID #4.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-05
+Nombre: Repuesto limite 5
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 5 registrado con el ID #5.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-06
+Nombre: Repuesto limite 6
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 6 registrado con el ID #6.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-07
+Nombre: Repuesto limite 7
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 7 registrado con el ID #7.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-08
+Nombre: Repuesto limite 8
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 8 registrado con el ID #8.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-09
+Nombre: Repuesto limite 9
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 9 registrado con el ID #9.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-10
+Nombre: Repuesto limite 10
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 10 registrado con el ID #10.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-11
+Nombre: Repuesto limite 11
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 11 registrado con el ID #11.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-12
+Nombre: Repuesto limite 12
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 12 registrado con el ID #12.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-13
+Nombre: Repuesto limite 13
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 13 registrado con el ID #13.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-14
+Nombre: Repuesto limite 14
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 14 registrado con el ID #14.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-15
+Nombre: Repuesto limite 15
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 15 registrado con el ID #15.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-16
+Nombre: Repuesto limite 16
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 16 registrado con el ID #16.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-17
+Nombre: Repuesto limite 17
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 17 registrado con el ID #17.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-18
+Nombre: Repuesto limite 18
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 18 registrado con el ID #18.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-19
+Nombre: Repuesto limite 19
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 19 registrado con el ID #19.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-20
+Nombre: Repuesto limite 20
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 20 registrado con el ID #20.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-21
+Nombre: Repuesto limite 21
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 21 registrado con el ID #21.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO REPUESTO ---
+Codigo: LIM-22
+Nombre: Repuesto limite 22
+Marca (opcional): Generico
+Precio unitario: 2
+Stock inicial: 10
+Stock minimo: 1
+Exito! Repuesto Repuesto limite 22 registrado con el ID #22.
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 1
+  -> AA111AA Toyota Corolla (km actual: 1000)
+ID del mecanico: 1
+  -> Jose Perez (MOTOR)
+Kilometraje de ingreso: 1000
+Descripcion de la falla: Prueba de limite
+Exito! Orden #1 abierta para AA111AA - Toyota Corolla (2015) con el mecanico Jose Perez.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 1
+  -> LIM-01 Repuesto limite 1 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 1 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 2
+  -> LIM-02 Repuesto limite 2 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 2 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 3
+  -> LIM-03 Repuesto limite 3 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 3 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 4
+  -> LIM-04 Repuesto limite 4 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 4 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 5
+  -> LIM-05 Repuesto limite 5 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 5 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 6
+  -> LIM-06 Repuesto limite 6 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 6 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 7
+  -> LIM-07 Repuesto limite 7 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 7 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 8
+  -> LIM-08 Repuesto limite 8 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 8 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 9
+  -> LIM-09 Repuesto limite 9 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 9 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 10
+  -> LIM-10 Repuesto limite 10 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 10 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 11
+  -> LIM-11 Repuesto limite 11 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 11 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 12
+  -> LIM-12 Repuesto limite 12 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 12 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 13
+  -> LIM-13 Repuesto limite 13 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 13 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 14
+  -> LIM-14 Repuesto limite 14 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 14 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 15
+  -> LIM-15 Repuesto limite 15 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 15 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 16
+  -> LIM-16 Repuesto limite 16 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 16 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 17
+  -> LIM-17 Repuesto limite 17 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 17 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 18
+  -> LIM-18 Repuesto limite 18 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 18 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 19
+  -> LIM-19 Repuesto limite 19 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 19 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 20
+  -> LIM-20 Repuesto limite 20 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+Agregado: 1 x Repuesto limite 20 a la orden #1. Stock restante: 9.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 21
+  -> LIM-21 Repuesto limite 21 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+ERROR: la orden #1 ya tiene el maximo de 20 lineas de detalle; el repuesto NO se agrego.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 5
+
+--- AGREGAR REPUESTO A UNA ORDEN ---
+ID de la orden: 1
+ID del repuesto: 22
+  -> LIM-22 Repuesto limite 22 | Stock disponible: 10 | Precio: $2.00
+Cantidad: 1
+ERROR: la orden #1 ya tiene el maximo de 20 lineas de detalle; el repuesto NO se agrego.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 1
+  ORDEN #1 [ABIERTA]
+  Apertura: 2026-11-18
+  Vehiculo: AA111AA - Toyota Corolla (2015) | Propietario: Carlos Rivas
+  Mecanico: Jose Perez
+  Falla: Prueba de limite
+  Km de ingreso: 1000
+  Detalle de repuestos:
+    1. LIM-01 Repuesto limite 1  x1 a $2.00 = $2.00
+    2. LIM-02 Repuesto limite 2  x1 a $2.00 = $2.00
+    3. LIM-03 Repuesto limite 3  x1 a $2.00 = $2.00
+    4. LIM-04 Repuesto limite 4  x1 a $2.00 = $2.00
+    5. LIM-05 Repuesto limite 5  x1 a $2.00 = $2.00
+    6. LIM-06 Repuesto limite 6  x1 a $2.00 = $2.00
+    7. LIM-07 Repuesto limite 7  x1 a $2.00 = $2.00
+    8. LIM-08 Repuesto limite 8  x1 a $2.00 = $2.00
+    9. LIM-09 Repuesto limite 9  x1 a $2.00 = $2.00
+    10. LIM-10 Repuesto limite 10  x1 a $2.00 = $2.00
+    11. LIM-11 Repuesto limite 11  x1 a $2.00 = $2.00
+    12. LIM-12 Repuesto limite 12  x1 a $2.00 = $2.00
+    13. LIM-13 Repuesto limite 13  x1 a $2.00 = $2.00
+    14. LIM-14 Repuesto limite 14  x1 a $2.00 = $2.00
+    15. LIM-15 Repuesto limite 15  x1 a $2.00 = $2.00
+    16. LIM-16 Repuesto limite 16  x1 a $2.00 = $2.00
+    17. LIM-17 Repuesto limite 17  x1 a $2.00 = $2.00
+    18. LIM-18 Repuesto limite 18  x1 a $2.00 = $2.00
+    19. LIM-19 Repuesto limite 19  x1 a $2.00 = $2.00
+    20. LIM-20 Repuesto limite 20  x1 a $2.00 = $2.00
+  Repuestos: $40.00 | Mano de obra: $0.00 | TOTAL: $40.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 3
+
+--- BUSCAR REPUESTO POR ID ---
+ID del repuesto: 21
+ID: 21 | LIM-21 | Repuesto limite 21 (Generico) | $2.00 | Stock: 10 (min 1)
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

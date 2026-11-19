@@ -1,0 +1,208 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 2
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 4
+
+--- DAR DE BAJA A UN MECANICO ---
+ID del mecanico: 1
+ERROR: no se puede dar de baja a Jose Perez: tiene 1 orden(es) ABIERTA(S). Cierrelas o anulelas primero.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 7
+
+--- CERRAR ORDEN ---
+ID de la orden: 9
+Mano de obra ($): 45
+Orden #9 CERRADA el 2026-11-18. Total a cobrar: $100.50
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 2
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 4
+
+--- DAR DE BAJA A UN MECANICO ---
+ID del mecanico: 1
+Mecanico Jose Perez dado de baja. Su historial de ordenes se conserva.
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 3
+
+--- BUSCAR MECANICO POR ID ---
+ID del mecanico: 1
+  ID: 1 | Jose Perez  [DADO DE BAJA]
+  Cedula: V-12345678 | Especialidad: MOTOR | Ingreso: 2018-03-12
+
+--- GESTION DE MECANICOS ---
+1. Registrar mecanico
+2. Listar mecanicos
+3. Buscar por ID
+4. Dar de baja
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 3
+
+--- LISTAR ORDENES POR ESTADO ---
+Estado (ABIERTA/CERRADA/ANULADA): cerrada
+Orden #1 | 2026-09-03 | CERRADA | AA123BB Toyota Corolla (2015) | Mec: Jose Perez | Total: $102.70
+Orden #2 | 2026-09-10 | CERRADA | AB456CD Chevrolet Aveo (2012) | Mec: Ana Villalobos | Total: $74.00
+Orden #3 | 2026-09-15 | CERRADA | AC789EF Ford Fiesta (2018) | Mec: Luis Fuenmayor | Total: $115.00
+Orden #4 | 2026-09-22 | CERRADA | AD012GH Honda Civic (2020) | Mec: Jose Perez | Total: $233.20
+Orden #6 | 2026-10-08 | CERRADA | AF678KL Kia Rio (2019) | Mec: Marta Soto | Total: $128.20
+Orden #7 | 2026-10-14 | CERRADA | AG901MN Toyota Hilux (2014) | Mec: Luis Fuenmayor | Total: $265.00
+Orden #9 | 2026-11-12 | CERRADA | AB456CD Chevrolet Aveo (2012) | Mec: Jose Perez | Total: $100.50
+7 orden(es) CERRADA.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 3
+  -> AC789EF Ford Fiesta (km actual: 45500)
+ID del mecanico: 1
+Kilometraje de ingreso: 46000
+Descripcion de la falla: Orden con mecanico de baja
+ERROR: El mecanico indicado esta dado de baja y no puede recibir ordenes.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

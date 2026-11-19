@@ -1,0 +1,220 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 6
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 1
+
+--- VERIFICACION DE INTEGRIDAD ---
+No se encontraron problemas.
+
++===========================================+
+|    VERIFICACION DE INTEGRIDAD             |
++===========================================+
+| Vehiculos verificados:   9                |
+| Mecanicos verificados:   4                |
+| Repuestos verificados:   13               |
+| Ordenes verificadas:     10               |
+| Problemas encontrados:   0                |
++===========================================+
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 2
+
+--- CREAR BACKUP ---
+Backup creado en la carpeta backup_2026-11-18_19-48/ (copia de todos los archivos .bin).
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 1
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: AZ999ZZ
+Marca: Renault
+Modelo: Logan
+Anio: 2022
+Kilometraje: 100
+Nombre del propietario: Cliente Nuevo
+Cedula del propietario: V-999
+Telefono del propietario: 0414-999
+Exito! Vehiculo Renault Logan registrado con el ID #10.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 1
+
+--- ABRIR ORDEN DE SERVICIO ---
+ID del vehiculo: 10
+  -> AZ999ZZ Renault Logan (km actual: 100)
+ID del mecanico: 4
+  -> Marta Soto (GENERAL)
+Kilometraje de ingreso: 150
+Descripcion de la falla: Revision de garantia
+Exito! Orden #11 abierta para AZ999ZZ - Renault Logan (2022) con el mecanico Marta Soto.
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 11
+  ORDEN #11 [ABIERTA]
+  Apertura: 2026-11-18
+  Vehiculo: AZ999ZZ - Renault Logan (2022) | Propietario: Cliente Nuevo
+  Mecanico: Marta Soto
+  Falla: Revision de garantia
+  Km de ingreso: 150
+  Detalle de repuestos:
+    (sin repuestos)
+  Repuestos: $0.00 | Mano de obra: $0.00 | TOTAL: $0.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 6
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 1
+
+--- VERIFICACION DE INTEGRIDAD ---
+No se encontraron problemas.
+
++===========================================+
+|    VERIFICACION DE INTEGRIDAD             |
++===========================================+
+| Vehiculos verificados:   10               |
+| Mecanicos verificados:   4                |
+| Repuestos verificados:   13               |
+| Ordenes verificadas:     11               |
+| Problemas encontrados:   0                |
++===========================================+
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

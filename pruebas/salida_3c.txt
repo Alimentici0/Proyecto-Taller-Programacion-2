@@ -1,0 +1,119 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 11
+  ORDEN #11 [CERRADA]
+  Apertura: 2026-11-18 | Cierre: 2026-11-18
+  Vehiculo: AC789EF - Ford Fiesta (2018) | Propietario: Luis Fernandez
+  Mecanico: Marta Soto
+  Falla: Cambio de kit de embrague
+  Km de ingreso: 46000
+  Detalle de repuestos:
+    1. FIL-ACE-01 Filtro de aceite  x4 a $6.50 = $26.00
+    2. PAS-FRE-01 Pastillas de freno delanteras  x1 a $28.00 = $28.00
+    3. COR-DIS-01 Correa de distribucion  x1 a $32.00 = $32.00
+  Repuestos: $86.00 | Mano de obra: $55.00 | TOTAL: $141.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 2
+
+--- INVENTARIO DE REPUESTOS ---
+ID: 1 | FIL-ACE-01 | Filtro de aceite (Fram) | $6.50 | Stock: 34 (min 10)
+ID: 2 | FIL-AIR-01 | Filtro de aire (Fram) | $8.00 | Stock: 23 (min 8)
+ID: 3 | PAS-FRE-01 | Pastillas de freno delanteras (Brembo) | $28.00 | Stock: 13 (min 5)
+ID: 4 | BUJ-NGK-01 | Bujia NGK (NGK) | $4.25 | Stock: 52 (min 20)
+ID: 5 | BAT-12V-01 | Bateria 12V 75Ah (Bosch) | $95.00 | Stock: 4 (min 3)
+ID: 6 | ACE-10W40 | Aceite 10W-40 1L (Castrol) | $7.80 | Stock: 68 (min 20)
+ID: 7 | COR-DIS-01 | Correa de distribucion (Gates) | $32.00 | Stock: 8 (min 4)
+ID: 8 | AMO-DEL-01 | Amortiguador delantero (Monroe) | $55.00 | Stock: 7 (min 4)
+ID: 9 | LIQ-FRE-01 | Liquido de frenos DOT4 (Prestone) | $5.50 | Stock: 26 (min 10)
+ID: 10 | BOM-AGU-01 | Bomba de agua (Gates) | $42.00 | Stock: 3 (min 3)  ** BAJO STOCK **
+ID: 11 | ALT-001 | Alternador 90A (Bosch) | $120.00 | Stock: 2 (min 2)  ** BAJO STOCK **
+ID: 12 | REF-CLT-01 | Refrigerante 1L (Prestone) | $4.00 | Stock: 46 (min 15)
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

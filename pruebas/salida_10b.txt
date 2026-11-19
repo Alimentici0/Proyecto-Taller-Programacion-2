@@ -1,0 +1,84 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 1
+  ORDEN #1 [ABIERTA]
+  Apertura: 2026-11-18
+  Vehiculo: AA111AA - Toyota Corolla (2015) | Propietario: Carlos Rivas
+  Mecanico: Jose Perez
+  Falla: Prueba de limite
+  Km de ingreso: 1000
+  Detalle de repuestos:
+    1. LIM-01 Repuesto limite 1  x1 a $2.00 = $2.00
+    2. LIM-02 Repuesto limite 2  x1 a $2.00 = $2.00
+    3. LIM-03 Repuesto limite 3  x1 a $2.00 = $2.00
+    4. LIM-04 Repuesto limite 4  x1 a $2.00 = $2.00
+    5. LIM-05 Repuesto limite 5  x1 a $2.00 = $2.00
+    6. LIM-06 Repuesto limite 6  x1 a $2.00 = $2.00
+    7. LIM-07 Repuesto limite 7  x1 a $2.00 = $2.00
+    8. LIM-08 Repuesto limite 8  x1 a $2.00 = $2.00
+    9. LIM-09 Repuesto limite 9  x1 a $2.00 = $2.00
+    10. LIM-10 Repuesto limite 10  x1 a $2.00 = $2.00
+    11. LIM-11 Repuesto limite 11  x1 a $2.00 = $2.00
+    12. LIM-12 Repuesto limite 12  x1 a $2.00 = $2.00
+    13. LIM-13 Repuesto limite 13  x1 a $2.00 = $2.00
+    14. LIM-14 Repuesto limite 14  x1 a $2.00 = $2.00
+    15. LIM-15 Repuesto limite 15  x1 a $2.00 = $2.00
+    16. LIM-16 Repuesto limite 16  x1 a $2.00 = $2.00
+    17. LIM-17 Repuesto limite 17  x1 a $2.00 = $2.00
+    18. LIM-18 Repuesto limite 18  x1 a $2.00 = $2.00
+    19. LIM-19 Repuesto limite 19  x1 a $2.00 = $2.00
+    20. LIM-20 Repuesto limite 20  x1 a $2.00 = $2.00
+  Repuestos: $40.00 | Mano de obra: $0.00 | TOTAL: $40.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

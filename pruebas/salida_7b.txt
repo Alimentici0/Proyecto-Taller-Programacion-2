@@ -1,0 +1,104 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 6
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 1
+
+--- VERIFICACION DE INTEGRIDAD ---
+ROTO: Orden #11 apunta al vehiculo ID 10 (no existe en vehiculos.bin)
+
++===========================================+
+|    VERIFICACION DE INTEGRIDAD             |
++===========================================+
+| Vehiculos verificados:   9                |
+| Mecanicos verificados:   4                |
+| Repuestos verificados:   13               |
+| Ordenes verificadas:     11               |
+| Problemas encontrados:   1                |
++===========================================+
+
+--- MANTENIMIENTO ---
+1. Verificar integridad de los datos
+2. Crear backup
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 11
+  ORDEN #11 [ABIERTA]
+  Apertura: 2026-11-18
+  Vehiculo: ? - (vehiculo no encontrado) | Propietario: 
+  Mecanico: Marta Soto
+  Falla: Revision de garantia
+  Km de ingreso: 150
+  Detalle de repuestos:
+    (sin repuestos)
+  Repuestos: $0.00 | Mano de obra: $0.00 | TOTAL: $0.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

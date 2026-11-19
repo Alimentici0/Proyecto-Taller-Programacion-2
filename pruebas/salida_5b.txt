@@ -1,0 +1,121 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 3
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 2
+
+--- INVENTARIO DE REPUESTOS ---
+ID: 1 | FIL-ACE-01 | Filtro de aceite (Fram) | $6.50 | Stock: 39 (min 10)
+ID: 2 | FIL-AIR-01 | Filtro de aire (Fram) | $8.00 | Stock: 24 (min 8)
+ID: 3 | PAS-FRE-01 | Pastillas de freno delanteras (Brembo) | $28.00 | Stock: 14 (min 5)
+ID: 4 | BUJ-NGK-01 | Bujia NGK (NGK) | $4.25 | Stock: 56 (min 20)
+ID: 5 | BAT-12V-01 | Bateria 12V 75Ah (Bosch) | $95.00 | Stock: 4 (min 3)
+ID: 6 | ACE-10W40 | Aceite 10W-40 1L (Castrol) | $7.80 | Stock: 72 (min 20)
+ID: 7 | COR-DIS-01 | Correa de distribucion (Gates) | $32.00 | Stock: 9 (min 4)
+ID: 8 | AMO-DEL-01 | Amortiguador delantero (Monroe) | $55.00 | Stock: 7 (min 4)
+ID: 9 | LIQ-FRE-01 | Liquido de frenos DOT4 (Prestone) | $5.50 | Stock: 27 (min 10)
+ID: 10 | BOM-AGU-01 | Bomba de agua (Gates) | $42.00 | Stock: 3 (min 3)  ** BAJO STOCK **
+ID: 11 | ALT-001 | Alternador 90A (Bosch) | $120.00 | Stock: 2 (min 2)  ** BAJO STOCK **
+ID: 12 | REF-CLT-01 | Refrigerante 1L (Prestone) | $4.00 | Stock: 46 (min 15)
+
+--- INVENTARIO DE REPUESTOS ---
+1. Registrar repuesto
+2. Listar repuestos
+3. Buscar por ID
+4. Buscar por codigo
+5. Buscar por nombre
+6. Entrada de mercancia
+7. Cambiar precio
+8. Eliminar repuesto
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 6
+  ORDEN #6 [ANULADA]
+  Apertura: 2026-10-08 | Cierre: 2026-10-08
+  Vehiculo: AF678KL - Kia Rio (2019) | Propietario: Sofia Perez
+  Mecanico: Marta Soto
+  Falla: Mantenimiento de 20000 km
+  Km de ingreso: 20100
+  Detalle de repuestos:
+    1. FIL-ACE-01 Filtro de aceite  x1 a $6.50 = $6.50
+    2. FIL-AIR-01 Filtro de aire  x1 a $8.00 = $8.00
+    3. BUJ-NGK-01 Bujia NGK  x4 a $4.25 = $17.00
+    4. ACE-10W40 Aceite 10W-40 1L  x4 a $7.80 = $31.20
+    5. LIQ-FRE-01 Liquido de frenos DOT4  x1 a $5.50 = $5.50
+  Repuestos: $68.20 | Mano de obra: $60.00 | TOTAL: $128.20
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

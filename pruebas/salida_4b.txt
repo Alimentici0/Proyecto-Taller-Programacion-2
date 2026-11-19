@@ -1,0 +1,79 @@
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 4
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 2
+
+--- VER ORDEN ---
+ID de la orden: 1
+  ORDEN #1 [ABIERTA]
+  Apertura: 2026-11-18
+  Vehiculo: AA111AA - Toyota Corolla (2015) | Propietario: Carlos Rivas
+  Mecanico: Jose Perez
+  Falla: Revision completa
+  Km de ingreso: 86000
+  Detalle de repuestos:
+    1. REP-01 Repuesto numero 1  x1 a $1.50 = $1.50
+    2. REP-02 Repuesto numero 2  x1 a $3.00 = $3.00
+    3. REP-03 Repuesto numero 3  x1 a $4.50 = $4.50
+    4. REP-04 Repuesto numero 4  x1 a $6.00 = $6.00
+    5. REP-05 Repuesto numero 5  x1 a $7.50 = $7.50
+    6. REP-06 Repuesto numero 6  x1 a $9.00 = $9.00
+    7. REP-07 Repuesto numero 7  x1 a $10.50 = $10.50
+    8. REP-08 Repuesto numero 8  x1 a $12.00 = $12.00
+    9. REP-09 Repuesto numero 9  x1 a $13.50 = $13.50
+    10. REP-10 Repuesto numero 10  x1 a $15.00 = $15.00
+    11. REP-11 Repuesto numero 11  x1 a $16.50 = $16.50
+    12. REP-12 Repuesto numero 12  x1 a $18.00 = $18.00
+    13. REP-13 Repuesto numero 13  x1 a $19.50 = $19.50
+    14. REP-14 Repuesto numero 14  x1 a $21.00 = $21.00
+    15. REP-15 Repuesto numero 15  x1 a $22.50 = $22.50
+  Repuestos: $180.00 | Mano de obra: $0.00 | TOTAL: $180.00
+
+--- ORDENES DE SERVICIO ---
+1. Abrir orden
+2. Ver orden por ID
+3. Listar ordenes por estado
+4. Historial de un vehiculo
+5. Agregar repuesto a una orden
+6. Quitar repuesto de una orden
+7. Cerrar orden
+8. Anular orden
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

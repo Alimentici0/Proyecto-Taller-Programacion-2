@@ -1,0 +1,199 @@
+Autoservicio El Lago C.A.
+J-30123456-7
+Av. 5 de Julio, Maracaibo
+0261-7001234
+1
+1
+AA111AA
+Toyota
+Corolla
+2015
+85000
+Carlos Rivas
+V-1
+0414
+0
+2
+1
+Jose Perez
+V-100
+MOTOR
+2018-03-12
+0
+3
+1
+REP-01
+Repuesto numero 1
+Generico
+1.5
+10
+2
+1
+REP-02
+Repuesto numero 2
+Generico
+3.0
+10
+2
+1
+REP-03
+Repuesto numero 3
+Generico
+4.5
+10
+2
+1
+REP-04
+Repuesto numero 4
+Generico
+6.0
+10
+2
+1
+REP-05
+Repuesto numero 5
+Generico
+7.5
+10
+2
+1
+REP-06
+Repuesto numero 6
+Generico
+9.0
+10
+2
+1
+REP-07
+Repuesto numero 7
+Generico
+10.5
+10
+2
+1
+REP-08
+Repuesto numero 8
+Generico
+12.0
+10
+2
+1
+REP-09
+Repuesto numero 9
+Generico
+13.5
+10
+2
+1
+REP-10
+Repuesto numero 10
+Generico
+15.0
+10
+2
+1
+REP-11
+Repuesto numero 11
+Generico
+16.5
+10
+2
+1
+REP-12
+Repuesto numero 12
+Generico
+18.0
+10
+2
+1
+REP-13
+Repuesto numero 13
+Generico
+19.5
+10
+2
+1
+REP-14
+Repuesto numero 14
+Generico
+21.0
+10
+2
+1
+REP-15
+Repuesto numero 15
+Generico
+22.5
+10
+2
+0
+4
+1
+1
+1
+86000
+Revision completa
+5
+1
+1
+1
+5
+1
+2
+1
+5
+1
+3
+1
+5
+1
+4
+1
+5
+1
+5
+1
+5
+1
+6
+1
+5
+1
+7
+1
+5
+1
+8
+1
+5
+1
+9
+1
+5
+1
+10
+1
+5
+1
+11
+1
+5
+1
+12
+1
+5
+1
+13
+1
+5
+1
+14
+1
+5
+1
+15
+1
+2
+1
+0
+0

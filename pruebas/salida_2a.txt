@@ -1,0 +1,262 @@
+
+=== PRIMER ARRANQUE: DATOS DEL TALLER ===
+Nombre del taller: Autoservicio El Lago C.A.
+RIF: J-30123456-7
+Direccion: Av. 5 de Julio, Maracaibo
+Telefono: 0261-7001234
+Taller registrado correctamente.
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 1
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: AA111AA
+Marca: Toyota
+Modelo: Corolla
+Anio: 2010
+Kilometraje: 10000
+Nombre del propietario: Propietario 1
+Cedula del propietario: V-1
+Telefono del propietario: 0414-1
+Exito! Vehiculo Toyota Corolla registrado con el ID #1.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: BB222BB
+Marca: Chevrolet
+Modelo: Aveo
+Anio: 2011
+Kilometraje: 20000
+Nombre del propietario: Propietario 2
+Cedula del propietario: V-2
+Telefono del propietario: 0414-2
+Exito! Vehiculo Chevrolet Aveo registrado con el ID #2.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: CC333CC
+Marca: Ford
+Modelo: Fiesta
+Anio: 2012
+Kilometraje: 30000
+Nombre del propietario: Propietario 3
+Cedula del propietario: V-3
+Telefono del propietario: 0414-3
+Exito! Vehiculo Ford Fiesta registrado con el ID #3.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: DD444DD
+Marca: Honda
+Modelo: Civic
+Anio: 2013
+Kilometraje: 40000
+Nombre del propietario: Propietario 4
+Cedula del propietario: V-4
+Telefono del propietario: 0414-4
+Exito! Vehiculo Honda Civic registrado con el ID #4.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: EE555EE
+Marca: Hyundai
+Modelo: Accent
+Anio: 2014
+Kilometraje: 50000
+Nombre del propietario: Propietario 5
+Cedula del propietario: V-5
+Telefono del propietario: 0414-5
+Exito! Vehiculo Hyundai Accent registrado con el ID #5.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 1
+
+--- REGISTRAR NUEVO VEHICULO ---
+Placa: FF666FF
+Marca: Kia
+Modelo: Rio
+Anio: 2015
+Kilometraje: 60000
+Nombre del propietario: Propietario 6
+Cedula del propietario: V-6
+Telefono del propietario: 0414-6
+Exito! Vehiculo Kia Rio registrado con el ID #6.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 7
+
+--- ELIMINAR VEHICULO ---
+ID del vehiculo: 3
+Vehiculo Ford Fiesta (placa CC333CC) eliminado.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 3
+
+--- BUSCAR VEHICULO POR ID ---
+ID del vehiculo: 5
+[DEPURACION] Registro leido directamente en el byte 1168 = 16 + (5 - 1) * 288 (sin recorrer el archivo)
+  ID: 5 | Placa: EE555EE
+  Vehiculo: Hyundai Accent (2014) | Km: 50000
+  Propietario: Propietario 5 | Cedula: V-5 | Telefono: 0414-5
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 3
+
+--- BUSCAR VEHICULO POR ID ---
+ID del vehiculo: 3
+[DEPURACION] Registro leido directamente en el byte 592 = 16 + (3 - 1) * 288 (sin recorrer el archivo)
+El vehiculo con ID 3 (placa CC333CC, Ford Fiesta) fue ELIMINADO.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 3
+
+--- BUSCAR VEHICULO POR ID ---
+ID del vehiculo: 99
+No existe ningun vehiculo con el ID 99.
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 2
+
+--- LISTA DE VEHICULOS REGISTRADOS ---
+ID: 1 | Placa: AA111AA | Toyota Corolla | Anio: 2010 | Km: 10000 | Propietario: Propietario 1
+ID: 2 | Placa: BB222BB | Chevrolet Aveo | Anio: 2011 | Km: 20000 | Propietario: Propietario 2
+ID: 4 | Placa: DD444DD | Honda Civic | Anio: 2013 | Km: 40000 | Propietario: Propietario 4
+ID: 5 | Placa: EE555EE | Hyundai Accent | Anio: 2014 | Km: 50000 | Propietario: Propietario 5
+ID: 6 | Placa: FF666FF | Kia Rio | Anio: 2015 | Km: 60000 | Propietario: Propietario 6
+Total: 5 vehiculo(s).
+
+--- GESTION DE VEHICULOS ---
+1. Registrar vehiculo
+2. Listar vehiculos
+3. Buscar por ID
+4. Buscar por placa
+5. Buscar por propietario
+6. Actualizar vehiculo
+7. Eliminar vehiculo
+0. Volver
+Seleccione una opcion: 0
+
++===========================================+
+|    SISTEMA DE GESTION DE TALLER           |
+|    Taller: Autoservicio El Lago C.A.      |
++===========================================+
+| 1. Gestion de Vehiculos                   |
+| 2. Gestion de Mecanicos                   |
+| 3. Inventario de Repuestos                |
+| 4. Ordenes de Servicio                    |
+| 5. Reportes                               |
+| 6. Mantenimiento                          |
+| 0. Salir                                  |
++===========================================+
+Seleccione una opcion: 0
+Hasta pronto. Los datos quedaron guardados en la carpeta datos/.

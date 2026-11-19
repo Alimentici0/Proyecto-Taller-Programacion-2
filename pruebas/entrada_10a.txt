@@ -1,0 +1,280 @@
+Autoservicio El Lago C.A.
+J-30123456-7
+Av. 5 de Julio, Maracaibo
+0261-7001234
+1
+1
+AA111AA
+Toyota
+Corolla
+2015
+1000
+Carlos Rivas
+V-1
+0414
+0
+2
+1
+Jose Perez
+V-100
+MOTOR
+2018-03-12
+0
+3
+1
+LIM-01
+Repuesto limite 1
+Generico
+2
+10
+1
+1
+LIM-02
+Repuesto limite 2
+Generico
+2
+10
+1
+1
+LIM-03
+Repuesto limite 3
+Generico
+2
+10
+1
+1
+LIM-04
+Repuesto limite 4
+Generico
+2
+10
+1
+1
+LIM-05
+Repuesto limite 5
+Generico
+2
+10
+1
+1
+LIM-06
+Repuesto limite 6
+Generico
+2
+10
+1
+1
+LIM-07
+Repuesto limite 7
+Generico
+2
+10
+1
+1
+LIM-08
+Repuesto limite 8
+Generico
+2
+10
+1
+1
+LIM-09
+Repuesto limite 9
+Generico
+2
+10
+1
+1
+LIM-10
+Repuesto limite 10
+Generico
+2
+10
+1
+1
+LIM-11
+Repuesto limite 11
+Generico
+2
+10
+1
+1
+LIM-12
+Repuesto limite 12
+Generico
+2
+10
+1
+1
+LIM-13
+Repuesto limite 13
+Generico
+2
+10
+1
+1
+LIM-14
+Repuesto limite 14
+Generico
+2
+10
+1
+1
+LIM-15
+Repuesto limite 15
+Generico
+2
+10
+1
+1
+LIM-16
+Repuesto limite 16
+Generico
+2
+10
+1
+1
+LIM-17
+Repuesto limite 17
+Generico
+2
+10
+1
+1
+LIM-18
+Repuesto limite 18
+Generico
+2
+10
+1
+1
+LIM-19
+Repuesto limite 19
+Generico
+2
+10
+1
+1
+LIM-20
+Repuesto limite 20
+Generico
+2
+10
+1
+1
+LIM-21
+Repuesto limite 21
+Generico
+2
+10
+1
+1
+LIM-22
+Repuesto limite 22
+Generico
+2
+10
+1
+0
+4
+1
+1
+1
+1000
+Prueba de limite
+5
+1
+1
+1
+5
+1
+2
+1
+5
+1
+3
+1
+5
+1
+4
+1
+5
+1
+5
+1
+5
+1
+6
+1
+5
+1
+7
+1
+5
+1
+8
+1
+5
+1
+9
+1
+5
+1
+10
+1
+5
+1
+11
+1
+5
+1
+12
+1
+5
+1
+13
+1
+5
+1
+14
+1
+5
+1
+15
+1
+5
+1
+16
+1
+5
+1
+17
+1
+5
+1
+18
+1
+5
+1
+19
+1
+5
+1
+20
+1
+5
+1
+21
+1
+5
+1
+22
+1
+2
+1
+0
+3
+3
+21
+0
+0

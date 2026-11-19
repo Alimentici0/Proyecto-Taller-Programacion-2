@@ -1,0 +1,70 @@
+Autoservicio El Lago C.A.
+J-30123456-7
+Av. 5 de Julio, Maracaibo
+0261-7001234
+1
+1
+AA111AA
+Toyota
+Corolla
+2010
+10000
+Propietario 1
+V-1
+0414-1
+1
+BB222BB
+Chevrolet
+Aveo
+2011
+20000
+Propietario 2
+V-2
+0414-2
+1
+CC333CC
+Ford
+Fiesta
+2012
+30000
+Propietario 3
+V-3
+0414-3
+1
+DD444DD
+Honda
+Civic
+2013
+40000
+Propietario 4
+V-4
+0414-4
+1
+EE555EE
+Hyundai
+Accent
+2014
+50000
+Propietario 5
+V-5
+0414-5
+1
+FF666FF
+Kia
+Rio
+2015
+60000
+Propietario 6
+V-6
+0414-6
+7
+3
+3
+5
+3
+3
+3
+99
+2
+0
+0
