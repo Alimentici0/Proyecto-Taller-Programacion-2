@@ -1,0 +1,14 @@
+# Binarios y objetos de compilacion
+build/
+taller
+generar_datos
+experimento_p1
+etapa1_bin
+*.o
+*.exe
+
+# Respaldos generados por el sistema
+backup_*/
+
+# Archivos temporales de las pruebas
+pruebas/trabajo/
