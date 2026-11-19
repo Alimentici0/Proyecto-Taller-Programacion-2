@@ -1,17 +1,15 @@
-// main.cpp (version provisional): muestra el tamano en bytes de cada
-// estructura que se escribira en disco.
+// main.cpp (version provisional): inicializa los archivos binarios.
 #include <iostream>
-#include "estructuras.h"
+#include "persistencia.h"
 
 using namespace std;
 
 int main() {
-    cout << "sizeof(ArchivoHeader)  = " << sizeof(ArchivoHeader) << " bytes\n";
-    cout << "sizeof(Taller)         = " << sizeof(Taller) << " bytes\n";
-    cout << "sizeof(Vehiculo)       = " << sizeof(Vehiculo) << " bytes\n";
-    cout << "sizeof(Mecanico)       = " << sizeof(Mecanico) << " bytes\n";
-    cout << "sizeof(Repuesto)       = " << sizeof(Repuesto) << " bytes\n";
-    cout << "sizeof(LineaDetalle)   = " << sizeof(LineaDetalle) << " bytes\n";
-    cout << "sizeof(OrdenServicio)  = " << sizeof(OrdenServicio) << " bytes\n";
+    const char* rutaConProblema = nullptr;
+    if (inicializarTodosLosArchivos(rutaConProblema) != EXITO) {
+        cout << "ERROR: no se pudo inicializar el archivo " << rutaConProblema << "\n";
+        return 1;
+    }
+    cout << "Archivos de datos listos en la carpeta " << CARPETA_DATOS << "/\n";
     return 0;
 }
