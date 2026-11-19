@@ -58,7 +58,7 @@ void ejecutarMenuPrincipal(const char* nombreTaller) {
         switch (opcion) {
             case 1: menuVehiculos(); break;
             case 2: menuMecanicos(); break;
-            case 3: cout << "(Inventario de repuestos: pendiente)\n"; break;
+            case 3: menuRepuestos(); break;
             case 4: cout << "(Ordenes de servicio: pendiente)\n"; break;
             case 5: cout << "(Reportes: pendiente)\n"; break;
             case 6: cout << "(Mantenimiento: pendiente)\n"; break;

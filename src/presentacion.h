@@ -33,3 +33,6 @@ void menuVehiculos();
 
 // ---- presentacion_mecanicos.cpp ----
 void menuMecanicos();
+
+// ---- presentacion_repuestos.cpp ----
+void menuRepuestos();
