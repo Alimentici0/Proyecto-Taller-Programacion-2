@@ -39,7 +39,7 @@ No se encontraron problemas.
 Seleccione una opcion: 2
 
 --- CREAR BACKUP ---
-Backup creado en la carpeta backup_2026-11-18_19-48/ (copia de todos los archivos .bin).
+Backup creado en la carpeta backup_2026-11-18_19-51/ (copia de todos los archivos .bin).
 
 --- MANTENIMIENTO ---
 1. Verificar integridad de los datos

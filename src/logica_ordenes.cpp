@@ -177,11 +177,17 @@ Resultado abrirOrden(int idVehiculo, int idMecanico, int kilometrajeIngreso,
 // --------------------------------------------------------------------
 // Agregar repuesto a una orden
 //
-// ORDEN DE ESCRITURA: 1) ordenes.bin  2) repuestos.bin.
-// La orden es el registro de lo que se consumio; el stock es un valor
-// derivado. Si el programa se interrumpe entre las dos escrituras queda
-// una linea en la orden con el stock sin descontar (hay evidencia y se
-// puede corregir). El orden inverso dejaria stock descontado SIN rastro.
+// ORDEN DE ESCRITURA: 1) repuestos.bin (se descuenta el stock)
+//                     2) ordenes.bin   (se agrega la linea)
+//
+// Regla que seguimos en TODAS las operaciones: el inventario nunca debe
+// SOBREESTIMAR lo que hay. Por eso el stock se descuenta ANTES de que la
+// orden reclame las unidades, y (en quitar / anular) se devuelve DESPUES
+// de que la orden las libero. Si el programa se interrumpe entre las dos
+// escrituras, el stock queda de MENOS (unidades "perdidas" en el sistema
+// pero presentes en el estante), nunca de MAS. Ese error es conservador,
+// no se le cobra de mas al cliente aunque se reintente, y se corrige con
+// "Entrada de mercancia". Ver README_V2.md, pregunta 2.
 // --------------------------------------------------------------------
 Resultado agregarRepuestoAOrden(int idOrden, int idRepuesto, int cantidad) {
     // ---- VALIDACIONES ----
@@ -221,16 +227,19 @@ Resultado agregarRepuestoAOrden(int idOrden, int idRepuesto, int cantidad) {
     }
 
     // ---- ESCRITURAS ----
-    r = sobrescribirOrden(orden);                         // 1) ordenes.bin
+    rep.stock -= cantidad;                                // 1) repuestos.bin
+    r = sobrescribirRepuesto(rep);
     if (r != EXITO) return r;
 
-    rep.stock -= cantidad;                                // 2) repuestos.bin
-    return sobrescribirRepuesto(rep);
+    return sobrescribirOrden(orden);                      // 2) ordenes.bin
 }
 
 // --------------------------------------------------------------------
 // Quitar repuesto de una orden
-// ORDEN DE ESCRITURA: 1) ordenes.bin  2) repuestos.bin (igual que agregar)
+// ORDEN DE ESCRITURA: 1) ordenes.bin (la orden suelta las unidades)
+//                     2) repuestos.bin (el stock las recupera)
+// Es el orden INVERSO a agregar, por la misma regla: el stock nunca
+// sobreestima. Una interrupcion deja el stock de menos, no de mas.
 // --------------------------------------------------------------------
 Resultado quitarRepuestoDeOrden(int idOrden, int idRepuesto) {
     // ---- VALIDACIONES ----

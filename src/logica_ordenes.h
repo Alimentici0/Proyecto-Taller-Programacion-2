@@ -2,11 +2,16 @@
 // logica_ordenes.h
 // CAPA DE LOGICA - ORDENES DE SERVICIO (convenciones: ver logica_vehiculos.h)
 //
-// Varias operaciones escriben en mas de un archivo. Regla: TODAS las
-// validaciones se hacen ANTES de la primera escritura; si algo falla,
-// no se escribe nada. Y cuando hay que escribir en dos archivos, se
-// escribe PRIMERO la orden y DESPUES el inventario/vehiculo (el porque
-// esta explicado en README_V2.md, seccion "Orden de escritura").
+// Varias operaciones escriben en mas de un archivo. Reglas:
+//  1) TODAS las validaciones se hacen ANTES de la primera escritura; si
+//     algo falla, no se escribe nada.
+//  2) El orden de escritura entre archivos sigue un principio: el
+//     inventario NUNCA debe sobreestimar lo que hay. El stock se descuenta
+//     antes de que la orden reclame unidades (agregar) y se devuelve
+//     despues de que la orden las libera (quitar, anular). Asi, si el
+//     programa se interrumpe a mitad, el stock queda de menos (error
+//     conservador y corregible con una entrada), nunca de mas.
+//     Detalle y justificacion: README_V2.md, pregunta 2.
 // ====================================================================
 #ifndef LOGICA_ORDENES_H
 #define LOGICA_ORDENES_H
@@ -75,7 +80,7 @@ Resultado cantidadOrdenesRegistradas(int& total);
 // descuenta). La linea nueva guarda el precio vigente como precio
 // historico. Si el repuesto ya esta en la orden, acumula las unidades en
 // SU linea (que conserva su precio historico original).
-// Escribe: ordenes.bin (la linea) y despues repuestos.bin (el stock).
+// Escribe: repuestos.bin (el stock) y despues ordenes.bin (la linea).
 // Errores: ERR_CANTIDAD_INVALIDA, ERR_ORDEN_NO_EXISTE, ERR_ESTADO_INCORRECTO,
 //          ERR_REPUESTO_NO_EXISTE, ERR_REPUESTO_ELIMINADO,
 //          ERR_STOCK_INSUFICIENTE, ERR_LIMITE_LINEAS, ERR_ARCHIVO.
@@ -83,7 +88,7 @@ Resultado agregarRepuestoAOrden(int idOrden, int idRepuesto, int cantidad);
 
 // Solo ordenes ABIERTAS. Elimina la linea COMPLETA y devuelve sus
 // unidades al inventario. Las lineas siguientes se corren una posicion.
-// Escribe: ordenes.bin y despues repuestos.bin.
+// Escribe: ordenes.bin (quita la linea) y despues repuestos.bin (devuelve el stock).
 // Errores: ERR_ORDEN_NO_EXISTE, ERR_ESTADO_INCORRECTO, ERR_LINEA_NO_EXISTE,
 //          ERR_REPUESTO_NO_EXISTE, ERR_ARCHIVO.
 Resultado quitarRepuestoDeOrden(int idOrden, int idRepuesto);
