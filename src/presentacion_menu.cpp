@@ -59,7 +59,7 @@ void ejecutarMenuPrincipal(const char* nombreTaller) {
             case 1: menuVehiculos(); break;
             case 2: menuMecanicos(); break;
             case 3: menuRepuestos(); break;
-            case 4: cout << "(Ordenes de servicio: pendiente)\n"; break;
+            case 4: menuOrdenes(); break;
             case 5: cout << "(Reportes: pendiente)\n"; break;
             case 6: cout << "(Mantenimiento: pendiente)\n"; break;
             case 0: cout << "Hasta pronto. Los datos quedaron guardados en la carpeta datos/.\n"; break;

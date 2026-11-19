@@ -36,3 +36,9 @@ void menuMecanicos();
 
 // ---- presentacion_repuestos.cpp ----
 void menuRepuestos();
+
+// ---- presentacion_ordenes.cpp ----
+void menuOrdenes();
+// Historial de ordenes de un vehiculo (por placa) con el total facturado.
+// Lo usan el submenu de ordenes y el Reporte 1.
+void mostrarHistorialVehiculo(const char* placa);
