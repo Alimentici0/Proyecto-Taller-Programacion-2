@@ -30,3 +30,6 @@ void ejecutarMenuPrincipal(const char* nombreTaller);
 
 // ---- presentacion_vehiculos.cpp ----
 void menuVehiculos();
+
+// ---- presentacion_mecanicos.cpp ----
+void menuMecanicos();
