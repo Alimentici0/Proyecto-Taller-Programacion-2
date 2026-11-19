@@ -20,8 +20,9 @@
 Resultado guardarVehiculo(const Vehiculo& nuevo, int& idAsignado);
 
 // Ubica el registro por calculo (sin recorrer el archivo). Lo entrega
-// este activo o eliminado. Si posicionLeida no es nullptr recibe el
-// byte exacto donde se hizo la lectura (para el mensaje de depuracion).
+// tanto si esta activo como si esta eliminado. Si posicionLeida no es
+// nullptr recibe el byte exacto donde se hizo la lectura (sirve para
+// el mensaje de depuracion).
 Resultado leerVehiculoPorID(int id, Vehiculo& destino, long* posicionLeida = nullptr);
 
 // Escribe el registro en su posicion original (segun v.id) y
