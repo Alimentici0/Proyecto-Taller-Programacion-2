@@ -1,0 +1,14 @@
+$ ./experimento_p1 escribir
+[escribir] sizeof(OrdenServicio) = 272 bytes
+[escribir] direccion guardada en 'detalles' = 0x5599ec40c2b0
+[escribir] linea 0 en memoria: repuesto 7 x2
+[escribir] orden escrita en orden_p1.bin. Cierre el programa y ejecute 'leer'.
+
+(se cierra el programa; se vuelve a ejecutar)
+$ ./experimento_p1 leer
+[leer] id=1 estado=ABIERTA falla=Cambio de aceite
+[leer] numDetalles=2 (los campos simples SI se recuperaron)
+[leer] direccion leida en 'detalles' = 0x5599ec40c2b0  (es la direccion de la ejecucion anterior)
+[leer] intentando acceder a la linea 0...
+Segmentation fault
+[el sistema operativo termino el programa: codigo de salida 139]

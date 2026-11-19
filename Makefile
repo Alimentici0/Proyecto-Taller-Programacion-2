@@ -21,6 +21,10 @@ generar_datos: herramientas/generar_datos.cpp $(LIB_OBJ)
 datos: generar_datos
 	./generar_datos
 
+# Experimento de la pregunta 1 del README (escribe una orden del Proyecto 1 con su puntero)
+experimento_p1: experimentos/experimento_p1.cpp
+	$(CXX) $(CXXFLAGS) -o $@ experimentos/experimento_p1.cpp
+
 # Codigo de la etapa 1 (solo como referencia, no forma parte del Proyecto 2)
 etapa1: etapa1/main_etapa1.cpp
 	$(CXX) $(CXXFLAGS) -o etapa1_bin etapa1/main_etapa1.cpp
@@ -28,4 +32,4 @@ etapa1: etapa1/main_etapa1.cpp
 clean:
 	rm -rf build taller generar_datos experimento_p1 etapa1_bin
 
-.PHONY: all datos etapa1 clean
+.PHONY: all datos experimento_p1 etapa1 clean
